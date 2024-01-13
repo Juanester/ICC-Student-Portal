@@ -7,6 +7,7 @@ class M_student_grade extends CI_Model{
     }
 
     public function get_student_grade($student_id, $subject_id, $year_level){
+        
         $this->db->select('GRADES');
         $this->db->select('STUDENT_ID');
         $this->db->from('student_grade');

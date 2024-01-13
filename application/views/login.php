@@ -7,7 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 
 <body>
+    test
 <input type="text" value="<?= $student_grade['STUDENT_ID'] ?>">
+<input type="text" value="<?= $student_grade['GRADES'] ?>">
 <input type="text" value="<?= $student_grade['GRADES'] ?>">
 
 <table>
