@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 05:38 PM
+-- Generation Time: Jan 15, 2024 at 08:12 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -30,11 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `employee` (
   `employee_id` int(8) NOT NULL,
   `employee_number` varchar(9) NOT NULL,
-  `firstname` varchar(60) NOT NULL,
-  `middlename` varchar(60) NOT NULL,
-  `lastname` varchar(60) NOT NULL,
+  `first_name` varchar(60) NOT NULL,
+  `middle_name` varchar(60) NOT NULL,
+  `last_name` varchar(60) NOT NULL,
   `access_role_id` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`employee_id`, `employee_number`, `first_name`, `middle_name`, `last_name`, `access_role_id`) VALUES
+(1, '9999-9999', 'Teachername', 'Teachermiddle', 'Teacherlast', 1);
 
 --
 -- Indexes for dumped tables
@@ -44,7 +51,8 @@ CREATE TABLE `employee` (
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
-  ADD PRIMARY KEY (`employee_id`);
+  ADD PRIMARY KEY (`employee_id`),
+  ADD UNIQUE KEY `employee_number` (`employee_number`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -54,7 +62,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `employee_id` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `employee_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 06:20 PM
+-- Generation Time: Jan 15, 2024 at 08:11 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -33,6 +33,15 @@ CREATE TABLE `access_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `access_role`
+--
+
+INSERT INTO `access_role` (`access_role_id`, `access_role_name`) VALUES
+(1, 'Teacher'),
+(2, 'Program Head'),
+(3, 'Registrar');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -50,7 +59,7 @@ ALTER TABLE `access_role`
 -- AUTO_INCREMENT for table `access_role`
 --
 ALTER TABLE `access_role`
-  MODIFY `access_role_id` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `access_role_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

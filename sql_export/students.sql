@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 04:13 PM
+-- Generation Time: Jan 15, 2024 at 08:12 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -41,6 +41,13 @@ CREATE TABLE `students` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`student_id`, `student_number`, `first_name`, `middle_name`, `last_name`, `contact_number`, `email_address`, `year_level`, `section_id`, `course_id`) VALUES
+(1, '0000-0000', 'Firstname', 'Middlename', 'Lastname', 99999999, 'test@email.com', 1, 1, 1);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -59,7 +66,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `student_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

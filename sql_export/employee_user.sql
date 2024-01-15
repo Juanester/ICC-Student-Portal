@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 05:07 PM
+-- Generation Time: Jan 15, 2024 at 08:12 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -41,7 +41,8 @@ CREATE TABLE `employee_user` (
 -- Indexes for table `employee_user`
 --
 ALTER TABLE `employee_user`
-  ADD PRIMARY KEY (`employee_user_id`);
+  ADD PRIMARY KEY (`employee_user_id`),
+  ADD UNIQUE KEY `employee_id` (`employee_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables

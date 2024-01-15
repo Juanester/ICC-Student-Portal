@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 04:30 PM
+-- Generation Time: Jan 15, 2024 at 08:12 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -41,7 +41,8 @@ CREATE TABLE `section` (
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
-  ADD PRIMARY KEY (`section_id`);
+  ADD PRIMARY KEY (`section_id`),
+  ADD UNIQUE KEY `section_name` (`section_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
