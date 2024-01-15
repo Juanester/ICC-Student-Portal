@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 08:11 PM
+-- Generation Time: Jan 15, 2024 at 08:12 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -24,42 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `access_role`
+-- Table structure for table `section`
 --
 
-CREATE TABLE `access_role` (
-  `access_role_id` int(8) NOT NULL,
-  `access_role_name` varchar(60) NOT NULL
+CREATE TABLE `section` (
+  `section_id` int(8) NOT NULL,
+  `section_name` varchar(60) NOT NULL,
+  `course_id` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `access_role`
---
-
-INSERT INTO `access_role` (`access_role_id`, `access_role_name`) VALUES
-(1, 'Teacher'),
-(2, 'Program Head'),
-(3, 'Registrar');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `access_role`
+-- Indexes for table `section`
 --
-ALTER TABLE `access_role`
-  ADD PRIMARY KEY (`access_role_id`);
+ALTER TABLE `section`
+  ADD PRIMARY KEY (`section_id`),
+  ADD UNIQUE KEY `section_name` (`section_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `access_role`
+-- AUTO_INCREMENT for table `section`
 --
-ALTER TABLE `access_role`
-  MODIFY `access_role_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `section`
+  MODIFY `section_id` int(8) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

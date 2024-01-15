@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 06:41 PM
+-- Generation Time: Jan 15, 2024 at 08:12 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -24,13 +24,13 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students_schedule_grade`
+-- Table structure for table `course`
 --
 
-CREATE TABLE `students_schedule_grade` (
-  `student_schedule_grade_id` int(8) NOT NULL,
-  `student_schedule_id` int(8) NOT NULL,
-  `grade` decimal(10,0) NOT NULL
+CREATE TABLE `course` (
+  `course_id` int(11) NOT NULL,
+  `course_code` varchar(8) NOT NULL,
+  `course_name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -38,20 +38,21 @@ CREATE TABLE `students_schedule_grade` (
 --
 
 --
--- Indexes for table `students_schedule_grade`
+-- Indexes for table `course`
 --
-ALTER TABLE `students_schedule_grade`
-  ADD PRIMARY KEY (`student_schedule_grade_id`);
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`course_id`),
+  ADD UNIQUE KEY `course_code` (`course_code`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `students_schedule_grade`
+-- AUTO_INCREMENT for table `course`
 --
-ALTER TABLE `students_schedule_grade`
-  MODIFY `student_schedule_grade_id` int(8) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `course`
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
