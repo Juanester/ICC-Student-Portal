@@ -18,15 +18,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/bootstrap-4-navbar/4.3.1/css/bootstrap-4-navbar.min.css">
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
     <link rel="stylesheet" href="css/Student_Login.css?<?= filemtime('css/Student_Login.css'); ?>">
-
-    <style>
-        body {
-            background-image: url('path/to/your/background-image.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff; /* Set text color to white for better visibility on the background */
-        }
-    </style>
 </head>
 
 <body>
@@ -40,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Insert text "Student portal account" -->
             <div class="login">
                 <h2>Student portal account</h2>
+                <span><?= !empty($message) ? $message : '' ?></span>
                 <form action="/C_Student_Login/studentLogin" method="post">
                     <label for="student_number">Student ID</label><br>
                     <input type="text" id="student_number" name="student_number" value=""><br>
