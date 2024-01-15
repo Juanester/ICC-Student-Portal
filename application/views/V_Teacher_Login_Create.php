@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<form action=/C_Teacher_Login/studentLoginCreate method="post" target="_self">
+<form action=/C_Teacher_Login/teacherLoginCreate method="post" target="_self">
 
   <label for="teacher_number">Student Number:</label><br>
   <input type="text" id="teacher_number" name="teacher_number" value=""><br>

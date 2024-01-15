@@ -28,10 +28,10 @@ class C_Teacher_Login extends CI_Controller {
         }
 	}
 
-    // For Creating students
+    // For Creating teacher
 	public function createTeacher()
 	{
-		$this->load->view('V_Student_Login_Create');
+		$this->load->view('V_Teacher_Login_Create');
 	}
 
 	public function teacherLoginCreate()
@@ -43,6 +43,6 @@ class C_Teacher_Login extends CI_Controller {
         $contact_number = $this->input->post('contact_number');
         $password = md5($this->input->post('password'));
 
-        $this->M_Student_Login->studentLoginCreate($teacher_number, $firstname, null, $lastname, $email_address, $contact_number, $password);
+        $this->M_Teacher_Login->teacherLoginCreate($teacher_number, $firstname, null, $lastname, $email_address, $contact_number, $password);
 	}
 }

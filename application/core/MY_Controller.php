@@ -14,6 +14,9 @@ class MY_Controller extends CI_Controller
         if(empty($_SESSION['student_number'])){
             redirect('/C_Student_Login/index');
         }
+        elseif(empty($_SESSION['teacher_number'])){
+            redirect('/C_Teacher_Login/index');
+        }
 
     }
 
