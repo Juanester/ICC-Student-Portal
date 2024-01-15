@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Insert text "Student portal account" -->
             <div class="login">
                 <h2>Student portal account</h2>
-                <form action="/C_Student_Login/student_login" method="post">
+                <form action="/C_Student_Login/studentLogin" method="post">
                     <label for="student_number">Student ID</label><br>
                     <input type="text" id="student_number" name="student_number" value=""><br>
                     <label for="password">Password</label><br>
