@@ -23,7 +23,8 @@ class C_Student_Login extends CI_Controller {
         $student_number = $this->M_Student_Login->fetchStudentNumber($student_number, $password);
         
         if(!empty($student_number)){
-            $this->createStudent();
+            $_SESSION['student_number'] = $student_number;
+            redirect('C_Student_Dashboard/index');
         }
 	}
 
