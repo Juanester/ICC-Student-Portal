@@ -2,11 +2,11 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
+        
 header {
     text-align: center;
     padding: 20px;
-    background-color: rgba(65, 88, 218, 0.7); /* Add background color with some transparency */
+    background-color:   rgba(5, 33, 194, 0.7); /* Add background color with some transparency */
 }
 
 h1 {
