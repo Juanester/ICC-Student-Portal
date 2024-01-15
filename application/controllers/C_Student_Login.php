@@ -12,12 +12,36 @@ class C_Student_Login extends CI_Controller {
 	public function index()
 	{
 
-        $student_grade = $this->M_student_grade->get_student_grade('2020-0071', '1', '1st');
+		$this->load->view('V_Student_Login');
+	}
 
-        $data = array(
-            'student_grade' => $student_grade
-        );
+	public function student_login()
+	{
+        $student_number = $this->input->post('student_number');
+        $password = md5($this->input->post('password'));
 
-		$this->load->view('login', $data);
+        $student_number = $this->M_Student_Login->fetchStudentNumber($student_number, $password);
+        
+        if(!empty($student_number)){
+            $this->createStudent();
+        }
+	}
+
+    // For Creating students
+	public function createStudent()
+	{
+		$this->load->view('V_Student_Login_Create');
+	}
+
+	public function studentLoginCreate()
+	{
+        $student_number = $this->input->post('student_number');
+        $firstname = $this->input->post('firstname');
+        $lastname = $this->input->post('lastname');
+        $email_address = $this->input->post('email_address');
+        $contact_number = $this->input->post('contact_number');
+        $password = md5($this->input->post('password'));
+
+        $this->M_Student_Login->studentLoginCreate($student_number, $firstname, null, $lastname, $email_address, $contact_number, $password);
 	}
 }
