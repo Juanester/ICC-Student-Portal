@@ -32,6 +32,6 @@ class M_Teacher_Login extends CI_Model{
 
         );
     
-        $this->db->insert('students', $data);
+        $this->db->insert('teacher', $data);
     }
 }
