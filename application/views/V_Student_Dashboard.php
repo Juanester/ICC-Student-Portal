@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-welcome to dashboard
+welcome to dashboard!
 
 <form action="/C_Student_Dashboard/logout" method="post">
   <input type="submit" value="Logout">
