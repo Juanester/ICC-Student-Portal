@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2024 at 06:39 AM
--- Server version: 10.4.32-MariaDB
+-- Generation Time: Jan 15, 2024 at 04:13 PM
+-- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -24,34 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student_grade`
+-- Table structure for table `students`
 --
 
-CREATE TABLE `student_grade` (
-  `STUDENT_GRADE_ID` int(8) NOT NULL,
-  `STUDENT_ID` varchar(10) NOT NULL,
-  `SUBJECT_ID` int(8) NOT NULL,
-  `YEAR_LEVEL` varchar(10) NOT NULL,
-  `GRADES` int(5) NOT NULL
+CREATE TABLE `students` (
+  `student_id` int(8) NOT NULL,
+  `student_number` varchar(9) NOT NULL,
+  `first_name` varchar(60) NOT NULL,
+  `middle_name` varchar(60) NOT NULL,
+  `last_name` varchar(60) NOT NULL,
+  `contact_number` int(11) NOT NULL,
+  `email_address` varchar(60) NOT NULL,
+  `year_level` int(1) NOT NULL,
+  `section_id` int(8) NOT NULL,
+  `course_id` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `student_grade`
---
-
-INSERT INTO `student_grade` (`STUDENT_GRADE_ID`, `STUDENT_ID`, `SUBJECT_ID`, `YEAR_LEVEL`, `GRADES`) VALUES
-(1, '2020-0071', 1, '1st', 5),
-(2, '2020-0071', 2, '1st', 2);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `student_grade`
+-- Indexes for table `students`
 --
-ALTER TABLE `student_grade`
-  ADD PRIMARY KEY (`STUDENT_GRADE_ID`);
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`student_id`),
+  ADD UNIQUE KEY `student_number` (`student_number`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `students`
+--
+ALTER TABLE `students`
+  MODIFY `student_id` int(8) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
