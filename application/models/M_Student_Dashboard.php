@@ -1,16 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Student_Management extends CI_Model{
+class M_Student_Dashboard extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
 
     public function fetchStudentGrade(){
-        $this->db->select('student_id');
-        $this->db->select('student_number');
-        $this->db->select('first_name');
-        $this->db->select('last_name');
+        $this->db->select('subject.subject_name');
+        $this->db->select('CONCAT(employee.first_name, " ", employee.last_name)');
+        $this->db->select('schedule.schedule_remarks');
+        $this->db->select('schedule');
         $this->db->from('students');
         return $this->db->get()->result_array();
     }
