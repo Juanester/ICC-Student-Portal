@@ -6,12 +6,15 @@ class M_Student_Dashboard extends CI_Model{
         parent::__construct();
     }
 
-    public function fetchStudentGrade(){
+    public function fetchStudentGradeList(){
         $this->db->select('subject.subject_name');
         $this->db->select('CONCAT(employee.first_name, " ", employee.last_name)');
         $this->db->select('schedule.schedule_remarks');
-        $this->db->select('schedule');
-        $this->db->from('students');
+        $this->db->select('schedule.room_remarks');
+        $this->db->select('student_schedule.year_level');
+        $this->db->select('student_schedule.semester');
+        $this->db->select('student_schedule.grade');
+        $this->db->from('students_schedule');
         return $this->db->get()->result_array();
     }
     
