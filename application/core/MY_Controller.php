@@ -11,7 +11,7 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
         
-        if(empty($_SESSION['student_number'])){
+        if(empty($_SESSION['student_id'])){
             redirect('/C_Student_Login/index');
         }
 

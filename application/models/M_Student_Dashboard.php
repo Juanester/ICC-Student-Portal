@@ -6,18 +6,31 @@ class M_Student_Dashboard extends CI_Model{
         parent::__construct();
     }
 
-    public function fetchStudentGradeList(){
+    public function fetchStudentGradeList($student_id){
         $this->db->select('subject.subject_name');
-        $this->db->select('CONCAT(employee.first_name, " ", employee.last_name)');
+        $this->db->select('CONCAT(employee.first_name, " ", employee.last_name) AS employee_name');
         $this->db->select('schedule.schedule_remarks');
         $this->db->select('schedule.room_remarks');
-        $this->db->select('student_schedule.year_level');
-        $this->db->select('student_schedule.semester');
-        $this->db->select('student_schedule.grade');
+        $this->db->select('students_schedule.year_level');
+        $this->db->select('students_schedule.semester');
+        $this->db->select('students_schedule.grade');
         $this->db->from('students_schedule');
+        $this->db->join('schedule','students_schedule.schedule_id = schedule.schedule_id','left');
+        $this->db->join('employee','schedule.employee_id = employee.employee_id','left');
+        $this->db->join('subject','schedule.subject_id = subject.subject_id','left');
+        $this->db->where('students_schedule.student_id', $student_id);
+        $this->db->order_by('students_schedule.year_level');
+        $this->db->order_by('students_schedule.semester');
         return $this->db->get()->result_array();
     }
     
+    public function fetchStudentInfo($student_id){
+        $this->db->select('first_name');
+        $this->db->select('last_name');
+        $this->db->from('students');
+        $this->db->where('student_id', $student_id);
+        return $this->db->get()->result_array()[0];
+    }
     public function studentLoginCreate($student_id, $password)
     {
         

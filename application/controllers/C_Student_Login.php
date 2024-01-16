@@ -7,7 +7,7 @@ class C_Student_Login extends CI_Controller {
         parent::__construct();
         $this->load->model('M_Student_Login');
 
-        if(!empty($_SESSION['student_number'])){
+        if(!empty($_SESSION['student_id'])){
             redirect('/C_Student_Dashboard/index');
         }
     }
@@ -32,10 +32,10 @@ class C_Student_Login extends CI_Controller {
         $student_number = $this->input->post('student_number');
         $password = md5($this->input->post('password'));
 
-        $student_number = $this->M_Student_Login->fetchStudentNumber($student_number, $password);
+        $student_id = $this->M_Student_Login->fetchStudentId($student_number, $password);
         
-        if(!empty($student_number)){
-            $_SESSION['student_number'] = $student_number;
+        if(!empty($student_id)){
+            $_SESSION['student_id'] = $student_id;
             redirect('C_Student_Dashboard/index');
         } else{
             $this->session->set_flashdata('message','Incorrect login and password');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 08:13 PM
+-- Generation Time: Jan 16, 2024 at 01:18 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -33,7 +33,7 @@ CREATE TABLE `students_schedule` (
   `schedule_id` int(8) NOT NULL,
   `year_level` int(1) NOT NULL,
   `semester` int(1) NOT NULL,
-  `grade` decimal(10,0) DEFAULT NULL
+  `grade` decimal(10,1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -41,7 +41,9 @@ CREATE TABLE `students_schedule` (
 --
 
 INSERT INTO `students_schedule` (`student_schedule_id`, `student_id`, `schedule_id`, `year_level`, `semester`, `grade`) VALUES
-(1, 1, 1, 1, 1, NULL);
+(1, 1, 1, 1, 1, '1.5'),
+(2, 1, 1, 1, 1, '2.0'),
+(3, 1, 1, 1, 2, '2.0');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +63,7 @@ ALTER TABLE `students_schedule`
 -- AUTO_INCREMENT for table `students_schedule`
 --
 ALTER TABLE `students_schedule`
-  MODIFY `student_schedule_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `student_schedule_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
