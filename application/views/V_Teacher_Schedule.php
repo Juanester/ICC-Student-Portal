@@ -25,8 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <tbody>
             <?php foreach ($teacher_student_schedule_list as $row): ?>
             <tr>
-                <td><input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>"
-                        <td><?= $row['student_number'] ?></td>
+                <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
+                <td><?= $row['student_number'] ?></td>
                 <td><?= $row['student_name'] ?></td>
                 <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
                 </td>
@@ -40,7 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <select type="" name="grade_remarks[]" value="<?= $row['grade_remarks_id'] ?>">
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
-                        <option value="<?= $option['grade_remarks_id'] ?>" <?= $row['grade_remarks_id'] == $option['grade_remarks_id'] ? 'selected' : ''?>>
+                        <option value="<?= $option['grade_remarks_id'] ?>"
+                            <?= $row['grade_remarks_id'] == $option['grade_remarks_id'] ? 'selected' : ''?>>
                             <?= $option['grade_remarks_id'] . ' - ' . $option['grade_remarks_name'] ?>
                         </option>
                         <?php endforeach; ?>
