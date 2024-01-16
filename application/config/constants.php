@@ -88,3 +88,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 defined('TEACHER_ACCESS')       OR define('TEACHER_ACCESS', 1);
 defined('PROGRAM_HEAD_ACCESS')  OR define('PROGRAM_HEAD_ACCESS', 2);
 defined('REGISTRAR_ACCESS')     OR define('REGISTRAR_ACCESS', 3);
+defined('MIS_ACCESS')     OR define('MIS_ACCESS', 4);
