@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 08:12 PM
+-- Generation Time: Jan 16, 2024 at 05:44 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -32,15 +32,18 @@ CREATE TABLE `schedule` (
   `employee_id` int(8) NOT NULL,
   `subject_id` int(8) NOT NULL,
   `schedule_remarks` varchar(60) NOT NULL,
-  `room_remarks` varchar(60) NOT NULL
+  `room_remarks` varchar(60) NOT NULL,
+  `year_level` int(1) NOT NULL,
+  `section_id` int(8) NOT NULL,
+  `semester` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `schedule`
 --
 
-INSERT INTO `schedule` (`schedule_id`, `employee_id`, `subject_id`, `schedule_remarks`, `room_remarks`) VALUES
-(1, 1, 1, '8:00AM - 9:00AM', '(Online)');
+INSERT INTO `schedule` (`schedule_id`, `employee_id`, `subject_id`, `schedule_remarks`, `room_remarks`, `year_level`, `section_id`, `semester`) VALUES
+(1, 1, 1, '8:00AM - 9:00AM', '(Online)', 0, 0, 0);
 
 --
 -- Indexes for dumped tables
