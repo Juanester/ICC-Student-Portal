@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2024 at 12:01 PM
+-- Generation Time: Jan 16, 2024 at 01:20 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -224,9 +224,9 @@ CREATE TABLE `students_schedule` (
 
 INSERT INTO `students_schedule` (`student_schedule_id`, `year_level`, `semester`, `grade`, `prelim_grade`, `midterm_grade`, `final_grade`, `student_id`, `schedule_id`, `grade_remarks_id`) VALUES
 (3, 1, 1, NULL, '80.00', '80.00', '90.00', 1, 1, 1),
-(4, 1, 1, '1.00', NULL, NULL, NULL, 1, 2, 1),
+(4, 1, 1, NULL, '90.00', NULL, NULL, 1, 2, 0),
 (7, 1, 1, NULL, NULL, NULL, NULL, 2, 1, NULL),
-(9, 2, 1, NULL, NULL, NULL, NULL, 3, 2, NULL);
+(9, 2, 1, NULL, '75.00', NULL, NULL, 3, 2, 0);
 
 -- --------------------------------------------------------
 
