@@ -12,17 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <table>
         <thead>
             <th></th>
-
             <th>Subject</th>
-
             <th>Room</th>
-
             <th>Schedule</th>
-
             <th>Year Level</th>
-
             <th>Semester</th>
-
             <th>Section Name</th>
         </thead>
         <tbody>
