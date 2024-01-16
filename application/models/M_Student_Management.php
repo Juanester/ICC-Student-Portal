@@ -6,16 +6,16 @@ class M_Student_Management extends CI_Model{
         parent::__construct();
     }
 
-    public function fetchStudentGrade(){
-        $this->db->select('student_id');
-        $this->db->select('student_number');
+    public function fetchStudent(){
         $this->db->select('first_name');
         $this->db->select('last_name');
+        $this->db->select('student_number');
+        $this->db->select('student_id');
         $this->db->from('students');
         return $this->db->get()->result_array();
     }
     
-    public function studentLoginCreate($student_id, $password)
+    public function studentCreate($student_id, $password)
     {
         
         $data = array(

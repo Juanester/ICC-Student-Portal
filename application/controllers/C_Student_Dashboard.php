@@ -1,10 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_Student_Dashboard extends MY_Controller {
+class C_Student_Dashboard extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
+
+        if(empty($_SESSION['student_id'])){
+            redirect('C_Student_Login');
+        }
+
         $this->load->model('M_Student_Dashboard');
     }
 

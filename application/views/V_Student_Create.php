@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-    <form action=/C_Student_Management/studentLoginCreate method="post" target="_self">
+    <form action=/C_Student_Management/studentCreate method="post" target="_self">
 
         <label for="student_id">Student:</label><br>
         <select id="student_id" name="student_id">

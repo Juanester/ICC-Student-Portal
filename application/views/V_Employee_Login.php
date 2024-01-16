@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/fontawesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4-navbar/4.3.1/css/bootstrap-4-navbar.min.css">
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
-    <link rel="stylesheet" href="css/Student_Login.css?<?= filemtime('css/Student_Login.css'); ?>">
+    <link rel="stylesheet" href="css/Employee_Login.css?<?= filemtime('css/Employee_Login.css'); ?>">
 </head>
 
 <body>
@@ -28,13 +28,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="container">
         <main>
-            <!-- Insert text "Student portal account" -->
+            <!-- Insert text "Employee portal account" -->
             <div class="login">
-                <h2>Student portal account</h2>
+                <h2>Employee Portal Account</h2>
                 <span><?= !empty($message) ? $message : '' ?></span>
-                <form action="/C_Student_Login/studentLogin" method="post">
-                    <label for="student_number">Student Number</label><br>
-                    <input type="text" id="student_number" name="student_number" value=""><br>
+                <form action="/C_Employee_Login/employeeLogin" method="post">
+                    <label for="employee_number">Employee Number</label><br>
+                    <input type="text" id="employee_number" name="employee_number" value=""><br>
                     <label for="password">Password</label><br>
                     <input type="password" id="password" name="password" value=""><br><br>
                     <div class="login_button_container">
