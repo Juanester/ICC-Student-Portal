@@ -19,11 +19,11 @@ class C_Student_Management extends CI_Controller {
 		$this->load->view('V_Student_Create', $data);
 	}
 
-	public function studentLoginCreate()
+	public function studentCreate()
 	{
-        $student_number = $this->input->post('student_id');
+        $student_id = $this->input->post('student_id');
         $password = md5($this->input->post('password'));
 
-        $this->M_Student_Management->studentLoginCreate($student_number, $password);
+        $this->M_Student_Management->studentCreate($student_id, $password);
 	}
 }

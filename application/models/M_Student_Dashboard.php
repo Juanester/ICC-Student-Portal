@@ -7,13 +7,16 @@ class M_Student_Dashboard extends CI_Model{
     }
 
     public function fetchStudentGradeList($student_id){
-        $this->db->select('subject.subject_name');
+        $this->db->select('CONCAT(subject.subject_code, " - ", subject.subject_name) AS subject_name');
         $this->db->select('CONCAT(employee.first_name, " ", employee.last_name) AS employee_name');
         $this->db->select('schedule.schedule_remarks');
         $this->db->select('schedule.room_remarks');
         $this->db->select('students_schedule.year_level');
         $this->db->select('students_schedule.semester');
         $this->db->select('students_schedule.grade');
+        $this->db->select('students_schedule.prelim_grade');
+        $this->db->select('students_schedule.midterm_grade');
+        $this->db->select('students_schedule.final_grade');
         $this->db->from('students_schedule');
         $this->db->join('schedule','students_schedule.schedule_id = schedule.schedule_id','left');
         $this->db->join('employee','schedule.employee_id = employee.employee_id','left');

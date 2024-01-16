@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_Student_Login extends CI_Controller {
+class C_Employee_Login extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
-        
+
         if(!empty($_SESSION['student_id'])){
             redirect('/C_Student_Dashboard/index');
         }elseif(!empty($_SESSION['employee_id'])){
@@ -14,7 +14,7 @@ class C_Student_Login extends CI_Controller {
             }
         }
 
-        $this->load->model('M_Student_Login');
+        $this->load->model('M_Employee_Login');
     }
 
 
@@ -25,26 +25,29 @@ class C_Student_Login extends CI_Controller {
             $data = array(
                 'message' => $message
             );
-            $this->load->view('V_Student_Login', $data);
+            $this->load->view('V_Employee_Login', $data);
         } else {
-            $this->load->view('V_Student_Login');
+            $this->load->view('V_Employee_Login');
         }
 
 	}
 
-	public function studentLogin()
+	public function employeeLogin()
 	{
-        $student_number = $this->input->post('student_number');
+        $employee_number = $this->input->post('employee_number');
         $password = md5($this->input->post('password'));
 
-        $student_id = $this->M_Student_Login->fetchStudentId($student_number, $password);
-        
-        if(!empty($student_id)){
-            $_SESSION['student_id'] = $student_id;
-            redirect('C_Student_Dashboard/index');
+        $employee_info = $this->M_Employee_Login->fetchEmployeeId($employee_number, $password);
+
+        if(!empty($employee_info)){
+            $_SESSION['employee_id'] = $employee_info['employee_id'];
+            $_SESSION['access_role_id'] = $employee_info['access_role_id'];
+            if($employee_info['access_role_id'] == TEACHER_ACCESS){
+                redirect('C_Teacher_Dashboard/index');
+            }
         } else{
             $this->session->set_flashdata('message','Incorrect login and password');
-            redirect('C_Student_Login/index'); 
+            redirect('C_Employee_Login/index'); 
         }
 	}
 }

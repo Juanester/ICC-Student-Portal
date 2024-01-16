@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 08:12 PM
+-- Generation Time: Jan 16, 2024 at 05:43 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -32,16 +32,15 @@ CREATE TABLE `employee` (
   `employee_number` varchar(9) NOT NULL,
   `first_name` varchar(60) NOT NULL,
   `middle_name` varchar(60) NOT NULL,
-  `last_name` varchar(60) NOT NULL,
-  `access_role_id` int(8) NOT NULL
+  `last_name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`employee_id`, `employee_number`, `first_name`, `middle_name`, `last_name`, `access_role_id`) VALUES
-(1, '9999-9999', 'Teachername', 'Teachermiddle', 'Teacherlast', 1);
+INSERT INTO `employee` (`employee_id`, `employee_number`, `first_name`, `middle_name`, `last_name`) VALUES
+(1, '9999-9999', 'Teachername', 'Teachermiddle', 'Teacherlast');
 
 --
 -- Indexes for dumped tables

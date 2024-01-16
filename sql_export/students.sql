@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 08:12 PM
+-- Generation Time: Jan 16, 2024 at 05:44 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -33,7 +33,7 @@ CREATE TABLE `students` (
   `first_name` varchar(60) NOT NULL,
   `middle_name` varchar(60) NOT NULL,
   `last_name` varchar(60) NOT NULL,
-  `contact_number` int(11) NOT NULL,
+  `contact_number` varchar(11) NOT NULL,
   `email_address` varchar(60) NOT NULL,
   `year_level` int(1) NOT NULL,
   `section_id` int(8) NOT NULL,
@@ -45,7 +45,8 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `student_number`, `first_name`, `middle_name`, `last_name`, `contact_number`, `email_address`, `year_level`, `section_id`, `course_id`) VALUES
-(1, '0000-0000', 'Firstname', 'Middlename', 'Lastname', 99999999, 'test@email.com', 1, 1, 1);
+(1, '0000-0000', 'Firstname', 'Middlename', 'Lastname', '09999999999', 'test@email.com', 1, 1, 1),
+(2, '0001-0000', 'Karl', 'Ronquillo', 'Vargas', '09121231231', 'test@email', 1, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -66,7 +67,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `student_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
