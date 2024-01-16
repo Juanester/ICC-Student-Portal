@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2024 at 05:51 AM
+-- Generation Time: Jan 16, 2024 at 06:53 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -97,6 +97,27 @@ INSERT INTO `employee_user` (`employee_user_id`, `employee_id`, `access_role_id`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `grade_remarks`
+--
+
+CREATE TABLE `grade_remarks` (
+  `grade_remarks_id` int(8) NOT NULL,
+  `grade_remarks_name` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `grade_remarks`
+--
+
+INSERT INTO `grade_remarks` (`grade_remarks_id`, `grade_remarks_name`) VALUES
+(1, 'Passed'),
+(2, 'Failed'),
+(3, 'Incomplete'),
+(4, 'Drop');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `schedule`
 --
 
@@ -173,16 +194,17 @@ CREATE TABLE `students_schedule` (
   `final_grade` decimal(5,2) DEFAULT NULL,
   `status_id` int(8) DEFAULT NULL,
   `student_id` int(8) NOT NULL,
-  `schedule_id` int(8) NOT NULL
+  `schedule_id` int(8) NOT NULL,
+  `grade_remarks_id` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `students_schedule`
 --
 
-INSERT INTO `students_schedule` (`student_schedule_id`, `year_level`, `semester`, `grade`, `prelim_grade`, `midterm_grade`, `final_grade`, `status_id`, `student_id`, `schedule_id`) VALUES
-(1, 1, 1, '1.75', '90.00', '100.00', '97.50', 1, 1, 1),
-(2, 1, 2, NULL, NULL, NULL, NULL, NULL, 1, 1);
+INSERT INTO `students_schedule` (`student_schedule_id`, `year_level`, `semester`, `grade`, `prelim_grade`, `midterm_grade`, `final_grade`, `status_id`, `student_id`, `schedule_id`, `grade_remarks_id`) VALUES
+(1, 1, 1, '1.75', '90.00', '100.00', '97.50', 1, 1, 1, 1),
+(2, 1, 2, NULL, NULL, NULL, NULL, NULL, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -255,6 +277,12 @@ ALTER TABLE `employee_user`
   ADD UNIQUE KEY `employee_id` (`employee_id`);
 
 --
+-- Indexes for table `grade_remarks`
+--
+ALTER TABLE `grade_remarks`
+  ADD PRIMARY KEY (`grade_remarks_id`);
+
+--
 -- Indexes for table `schedule`
 --
 ALTER TABLE `schedule`
@@ -321,6 +349,12 @@ ALTER TABLE `employee`
 --
 ALTER TABLE `employee_user`
   MODIFY `employee_user_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `grade_remarks`
+--
+ALTER TABLE `grade_remarks`
+  MODIFY `grade_remarks_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `schedule`

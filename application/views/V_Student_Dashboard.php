@@ -26,6 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <th>Finals Grade</th>
                 
                 <th>Grade</th>
+
+                <th>Remarks</th>
             </thead>
             <tbody>
                 <?php foreach ($student_grade_list as $row): ?>
@@ -38,6 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?= $row['midterm_grade'] ?></td>
                     <td><?= $row['final_grade'] ?></td>
                     <td><?= $row['grade'] ?></td>
+                    <td><?= $row['grade_remarks_name'] ?></td>
                   </tr>
                 <?php endforeach; ?>
             </tbody>
