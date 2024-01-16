@@ -26,6 +26,22 @@ class C_Teacher_Dashboard extends CI_Controller {
 		$this->load->view('V_Teacher_Dashboard', $data);
     }
 
+    public function schedule(){
+
+        $schedule_id = $this->input->get('schedule_id'); 
+        $employee_id = $this->session->userdata('employee_id');
+        
+        $teacher_info = $this->M_Teacher_Dashboard->fetchTeacherInfo($employee_id);
+        $teacher_student_schedule_list = $this->M_Teacher_Dashboard->fetchTeacherStudentScheduleList($schedule_id);
+        $grade_remarks_list = $this->M_Teacher_Dashboard->fetchGradeRemarksList();
+		$data = array( 
+            'teacher_info' => $teacher_info,
+            'teacher_student_schedule_list' => $teacher_student_schedule_list,
+            'grade_remarks_list' => $grade_remarks_list
+        );
+
+        $this->load->view('V_Teacher_Schedule', $data);
+    }
     public function logout(){
         $this->session->unset_userdata('employee_id');
         redirect($_SERVER['REQUEST_URI'], 'refresh'); 
