@@ -66,4 +66,8 @@ class M_Teacher_Dashboard extends CI_Model{
         return $this->db->get()->result_array()[0];
     }
     
+    public function updateStudentGrade($batch_condition){
+    
+        $this->db->update_batch('students_schedule', $batch_condition, 'student_schedule_id');
+    }
 }
