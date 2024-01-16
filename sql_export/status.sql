@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2024 at 01:43 AM
+-- Generation Time: Jan 16, 2024 at 01:47 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -24,20 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students_schedule`
+-- Table structure for table `status`
 --
 
-CREATE TABLE `students_schedule` (
-  `student_schedule_id` int(8) NOT NULL,
-  `year_level` int(1) NOT NULL,
-  `semester` int(1) NOT NULL,
-  `grade` decimal(1,1) DEFAULT NULL,
-  `prelim_grade` decimal(3,2) DEFAULT NULL,
-  `midterm_grade` decimal(3,2) DEFAULT NULL,
-  `final_grade` decimal(3,2) DEFAULT NULL,
-  `status_id` int(8) DEFAULT NULL,
-  `student_id` int(8) NOT NULL,
-  `schedule_id` int(8) NOT NULL
+CREATE TABLE `status` (
+  `status_id` int(8) NOT NULL,
+  `status_name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -45,20 +37,20 @@ CREATE TABLE `students_schedule` (
 --
 
 --
--- Indexes for table `students_schedule`
+-- Indexes for table `status`
 --
-ALTER TABLE `students_schedule`
-  ADD PRIMARY KEY (`student_schedule_id`);
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`status_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `students_schedule`
+-- AUTO_INCREMENT for table `status`
 --
-ALTER TABLE `students_schedule`
-  MODIFY `student_schedule_id` int(8) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `status`
+  MODIFY `status_id` int(8) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
