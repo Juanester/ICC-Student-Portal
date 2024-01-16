@@ -8,6 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <span>Welcome, <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span><br><br>
 
+    <label>Subject</label><br>
+    <input type="text" value="<?= $schedule_info['subject_name'] ?>">
+
     <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
         
     <input type="hidden" name="schedule_id" value="<?= $schedule_id ?>">
