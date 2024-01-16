@@ -11,6 +11,8 @@ class C_Employee_Login extends CI_Controller {
         }elseif(!empty($_SESSION['employee_id'])){
             if($_SESSION['access_role_id'] == TEACHER_ACCESS){
                 redirect('/C_Teacher_Dashboard/index');
+            }if($_SESSION['access_role_id'] == REGISTRAR_ACCESS){
+                redirect('/C_Registrar_Dashboard/index');
             }
         }
 
@@ -44,6 +46,8 @@ class C_Employee_Login extends CI_Controller {
             $_SESSION['access_role_id'] = $employee_info['access_role_id'];
             if($employee_info['access_role_id'] == TEACHER_ACCESS){
                 redirect('C_Teacher_Dashboard/index');
+            }else if($employee_info['access_role_id'] == REGISTRAR_ACCESS){
+                redirect('C_Registrar_Dashboard/index');
             }
         } else{
             $this->session->set_flashdata('message','Incorrect login and password');
