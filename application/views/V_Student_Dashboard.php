@@ -102,47 +102,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br>
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-        <table>
-            <thead class="bg-gray-200 border-b-2 border-gray-200">
+        <div class="overflow-auto rounded-lg shadow">
+        <table class="w-full">
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Subjects</th>
+                <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Subjects</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Teacher</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Teacher</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
                 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
 
-                <th class="p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody class="divide-y divide-gray-100">
                 <?php foreach ($student_grade_list as $row): ?>
 
-                  <tr class="bg-gray-500">
-                    <td><?= $row['subject_name'] ?></td>
-                    <td><?= $row['employee_name'] ?></td>
-                    <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
-                    <td><?= $row['semester'] == 1 ? '1st Semester' : ($row['semester'] == 2 ? '2nd Semester' : ($row['semester'] == 3 ? '3rd Semester' : '4th Semester')) ?></td>
-                    <td><?= $row['prelim_grade'] ?></td>
-                    <td><?= $row['midterm_grade'] ?></td>
-                    <td><?= $row['final_grade'] ?></td>
-                    <td><?= $row['grade'] ?></td>
-                    <td><?= $row['grade_remarks_name'] ?></td>
+                  <tr class="bg-gray-300">
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['employee_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] == 1 ? '1st Semester' : ($row['semester'] == 2 ? '2nd Semester' : ($row['semester'] == 3 ? '3rd Semester' : '4th Semester')) ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['prelim_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['midterm_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['final_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['grade_remarks_name'] ?></td>
                   </tr>
 
                 <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
 
         <br><br>
 
