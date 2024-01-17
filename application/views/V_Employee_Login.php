@@ -26,9 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h1>Immaculada Concepcion College</h1>
     </header>
 
-    <div class="container">
         <main>
-            <!-- Insert text "Employee portal account" -->
+            <div class="logo">
+            <img src="images\icc logo.webp" alt="logo">
+            </div>
             <div class="login">
                 <h2>Employee Portal Account</h2>
                 <span><?= !empty($message) ? $message : '' ?></span>
@@ -44,7 +45,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </form>
             </div>
         </main>
-    </div>
 </body>
 
 </html>
