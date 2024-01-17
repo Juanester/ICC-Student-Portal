@@ -102,14 +102,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php foreach ($schedule_list as $row): ?>
             <tr class="bg-gray-300">
             
-                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['room_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['schedule_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><pre>    <?= $row['year_level'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><pre>   <?= $row['semester'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><pre>  <?= $row['section_name'] ?></pre></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['room_remarks'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['schedule_remarks'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>    <?= $row['year_level'] ?></pre></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['semester'] ?></pre></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>  <?= $row['section_name'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class ">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 bg-blue-200 rounded-lg bg-opacity-50"><pre>     Edit</pre></span></a>
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg"><pre>     Edit</pre></span></a>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -118,12 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     </div>    
     </div>
-
-
-    <br><br>
-    
-    </div>    
-</div>
+ 
 
 
 

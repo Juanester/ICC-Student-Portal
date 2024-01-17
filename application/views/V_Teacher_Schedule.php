@@ -14,43 +14,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
        <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
-<nav class="bg-gray-800">
+       <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button type="button" onclick="toggleMenuDropdown()" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <!--
-                Icon when menu is closed.
-    
-                Menu open: "hidden", Menu closed: "block"
-              -->
-              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <!--
-                Icon when menu is open x.
-    
-                Menu open: "block", Menu closed: "hidden"
-              -->
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          
+
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            
             <div class="flex flex-shrink-0 items-center">
               
-            <img src="<?php echo base_url();?>images/icc.png" alt="" style="width: 50px;">
+            <img src="<?php echo base_url();?>images/iccl.webp" alt="" style="width: 50px;">
             </div>
             <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
+              <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1>IMMACULADA CONCEPCION COLLEGE</h1>  
-              </div>
+                <h1 class="text-gray-100 mt-5">     IMMACULADA CONCEPCION COLLEGE</h1>  
+              
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -74,15 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-               
-                <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
+                      <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
                     <form action="/C_Teacher_Dashboard/logout" method="post">
                     <input type="submit" value="Logout">
-                </form>
-                <br>
-                <form  action="/C_Teacher_Dashboard/" method="post">
-                <input class="back"  type="submit" value="Back">
-                </form>
+    </form>
+</form>
               
               </div>
             </div>
@@ -90,54 +64,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
-    
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="hidden sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <h1>IMMACULADA CONCEPCION COLLEGE</h1>  
-        </div>
-      </div>
     </nav>
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-    <br><br>
-
+  
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-            <div class="overflow-auto rounded-lg shadow">
+            <div class="mt-40">
             <table class="w-full">
+
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Student Number</pre></th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Name</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Status</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Student Number</pre></th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Student Name</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Status</th>
+            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
+            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
+            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
+            <th class="w-20 p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
             </tr>
         </thead>
+
         <tbody class="divide-y divide-gray-100">
             <?php foreach ($teacher_student_schedule_list as $row): ?>
             <tr class="bg-gray-300">
+
                 <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
-                <td><?= $row['student_number'] ?></td>
-                <td><?= $row['student_name'] ?></td>
-                <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['student_number'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['student_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
                 </td>
-                <td><?= $row['section_name'] ?></td>
-                <td></td>
-                <td><input type="number" name="prelim_grade[]" value="<?= $row['prelim_grade'] ?>">
-                <td><input type="number" name="midterm_grade[]" value="<?= $row['midterm_grade'] ?>">
-                <td><input type="number" name="final_grade[]" value="<?= $row['final_grade'] ?>">
-                <td><input type="number" name="grade[]" value="<?= $row['grade'] ?>">
-                <td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="prelim_grade[]" value="<?= $row['prelim_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="midterm_grade[]" value="<?= $row['midterm_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="final_grade[]" value="<?= $row['final_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="grade[]" value="<?= $row['grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200">
                     <select type="" name="grade_remarks[]" value="<?= $row['grade_remarks_id'] ?>">
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
