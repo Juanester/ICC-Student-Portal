@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="flex flex-shrink-0 items-center">
               
-            <img src="<?php echo base_url();?>images/ghLogo.jpg" alt="" style="width: 50px;">
+            <img src="<?php echo base_url();?>images/iccl.webp" alt="" style="width: 50px;">
             </div>
             <diav class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
