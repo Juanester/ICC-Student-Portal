@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
 
-    <div class="overflow-auto rounded-lg shadow">
+    <div class="overflow-auto rounded-lg shadow mt-20">
     <table class="w-full">
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
         <tr>
@@ -118,6 +118,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
+
+             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Edit</th>
         </tr>   
         </thead>
 
