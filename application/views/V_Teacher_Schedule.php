@@ -68,17 +68,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <button type="button" onclick="toggleProfileDropdown()" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
-                  <img src="<?php echo base_url();?>images/profile.png" alt="" style="width: 55px;">
+                  <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                
-                <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?>
-                
-                <form action="/C_Student_Dashboard/logout" method="post">
-            <input type="submit" value="Logout">
-        </form>
+                <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
+                    <form action="/C_Teacher_Dashboard/logout" method="post">
+                    <input type="submit" value="Logout">
+                </form>
+                <br>
+                <form  action="/C_Teacher_Dashboard/" method="post">
+                <input class="back"  type="submit" value="Back">
+                </form>
               
               </div>
             </div>
@@ -99,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-    <span>Welcome, <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span><br><br>
+    <br><br>
 
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -153,14 +156,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 
-    <br><br>
-        <form  action="/C_Teacher_Dashboard/" method="post">
-                <input class="back"  type="submit" value="Back">
-            </form>
-        <form  action="/C_Teacher_Dashboard/logout" method="post">
-                <input class="logout"  type="submit" value="Logout">
-            </form>
+    
 
+            <script>
+      function toggleProfileDropdown() {
+          var dropdown = document.getElementById("myProfileDropdown");
+          dropdown.classList.toggle("hidden");
+      }
+      function toggleMenuDropdown() {
+          var dropdown = document.getElementById("mobile-menu");
+          dropdown.classList.toggle("hidden");
+      }
+  </script>
 </body>
 
 </html>
