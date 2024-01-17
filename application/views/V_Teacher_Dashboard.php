@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Room</th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Schedule</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Schedule</pre></th>
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
 
@@ -105,9 +105,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['room_remarks'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['schedule_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['section_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><pre>    <?= $row['year_level'] ?></pre></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><pre>   <?= $row['semester'] ?></pre></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><pre>  <?= $row['section_name'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class ">
                     <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 bg-blue-200 rounded-lg bg-opacity-50"><pre>     Edit</pre></span></a>
                 </td>
