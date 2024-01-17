@@ -1,3 +1,4 @@
+
 <?php
 $imagePath = 'try.webp';
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -9,6 +10,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <style> 
+    h1 {
+            text-align: center;
+        }
+                </style>
     </head>
 
 <body>
@@ -48,7 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1>IMMACULADA CONCEPCION COLLEGE</h1>  
+
+                   <h1>IMMACULADA CONCEPCION COLLEGE</h1>
+
               </div>
             </div>
           </div>
