@@ -98,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <tr class="bg-gray-300">
 
                 <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
-                <td><?= $row['student_number'] ?></td>
+                <td><pre>      <?= $row['student_number'] ?></pre></td>
                 <td><?= $row['student_name'] ?></td>
                 <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
                 </td>
