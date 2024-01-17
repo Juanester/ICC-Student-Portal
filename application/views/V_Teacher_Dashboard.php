@@ -41,16 +41,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            
             <div class="flex flex-shrink-0 items-center">
               
-            <img src="<?php echo base_url();?>images/icc.png" alt="" style="width: 50px;">
+            <img src="<?php echo base_url();?>images/ghLogo.jpg" alt="" style="width: 50px;">
             </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
+            <diav class="hidden sm:ml-6 sm:block">
+              <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1>IMMACULADA CONCEPCION COLLEGE</h1>  
-              </div>
-            </div>
+                <h1>     IMMACULADA CONCEPCION COLLEGE</h1>  
+              
+            </diav>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -68,16 +69,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <button type="button" onclick="toggleProfileDropdown()" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
-                  <img src="<?php echo base_url();?>images/profile.png" alt="" style="width: 55px;">
+                  <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-               
-                <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?>
-                
-                <form action="/C_Student_Dashboard/logout" method="post">
-            <input type="submit" value="Logout">
+                      <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
+                    <form action="/C_Teacher_Dashboard/logout" method="post">
+                    <input type="submit" value="Logout">
+    </form>
         </form>
               
               </div>
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-    <span>Welcome, <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span><br><br>
+  
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
     <table>
@@ -136,11 +136,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </table>
 
     <br><br>
-    <form action="/C_Teacher_Dashboard/logout" method="post">
-        <input type="submit" value="Logout">
-    </form>
+    
     </div>    
 </div>
+
+
+
+
+<script>
+      function toggleProfileDropdown() {
+          var dropdown = document.getElementById("myProfileDropdown");
+          dropdown.classList.toggle("hidden");
+      }
+      function toggleMenuDropdown() {
+          var dropdown = document.getElementById("mobile-menu");
+          dropdown.classList.toggle("hidden");
+      }
+  </script>
 </body>
 
 </html>
