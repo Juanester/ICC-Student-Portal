@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-  
+
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
 
@@ -124,13 +124,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <tbody class="divide-y divide-gray-100">
             <?php foreach ($schedule_list as $row): ?>
             <tr class="bg-gray-300">
-                
+            
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['room_remarks'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['schedule_remarks'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['section_name'] ?></td>
+                <td class="">
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>">Edit</a>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -138,9 +141,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     </div>    
     </div>
-    <td class="">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>">Edit</a>
-                </td>
 
 
     <br><br>
