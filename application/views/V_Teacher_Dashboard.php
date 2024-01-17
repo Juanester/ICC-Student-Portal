@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
 
-             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Edit</th>
+             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"></th>
         </tr>   
         </thead>
 
@@ -133,8 +133,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['section_name'] ?></td>
-                <td class="">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>">Edit</a>
+                <td class="p-3 text-sm whitespace-nowrap class ">
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 bg-blue-200 rounded-lg bg-opacity-50">Edit</span></a>
                 </td>
             </tr>
             <?php endforeach; ?>
