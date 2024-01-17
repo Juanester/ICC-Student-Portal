@@ -55,11 +55,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                       <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
                     <form action="/C_Teacher_Dashboard/logout" method="post">
-                    <input type="submit" value="Logout">
+                      <br>
+                    <div class="hover:text-blue-500 ">
+                      <input class="hover:font-bold" type="submit" value="         Logout">
+                    </div>
     </form>
 </form>
               
@@ -80,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="overflow-auto rounded-lg shadow mt-20">
     <table class="w-full">
-        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+        <thead class="bg-gray-200 border-b-2 ">
         <tr>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>Subject</pre></th>
 
@@ -109,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['semester'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>  <?= $row['section_name'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class ">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg"><pre>     Edit</pre></span></a>
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
                 </td>
             </tr>
             <?php endforeach; ?>
