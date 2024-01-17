@@ -144,10 +144,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <br><br>
-    <form action="/C_Teacher_Dashboard/logout" method="post">
-        <input type="submit" value="Logout">
-    </form>
+    
+    </div>    
+</div>
 
+
+
+
+<script>
+      function toggleProfileDropdown() {
+          var dropdown = document.getElementById("myProfileDropdown");
+          dropdown.classList.toggle("hidden");
+      }
+      function toggleMenuDropdown() {
+          var dropdown = document.getElementById("mobile-menu");
+          dropdown.classList.toggle("hidden");
+      }
+  </script>
 </body>
 
 </html>
