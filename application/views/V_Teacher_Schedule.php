@@ -75,7 +75,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-            <div class="mt-40">
+          
+            <div class="overflow-auto rounded-lg shadow mt-40">
             <table class="w-full">
 
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
