@@ -101,15 +101,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php foreach ($student_grade_list as $row): ?>
 
                   <tr class="bg-gray-300">
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['employee_name'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] == 1 ? '1st Semester' : ($row['semester'] == 2 ? '2nd Semester' : ($row['semester'] == 3 ? '3rd Semester' : '4th Semester')) ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['prelim_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['midterm_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['final_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['grade_remarks_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['semester'] == 1 ? '1st Semester' : ($row['semester'] == 2 ? '2nd Semester' : ($row['semester'] == 3 ? '3rd Semester' : '4th Semester')) ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['prelim_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['midterm_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['final_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade_remarks_name'] ?></td>
                   </tr>
 
                 <?php endforeach; ?>
