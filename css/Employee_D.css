@@ -7,7 +7,7 @@ html{
     height: 100%;
 }
 body{
-    background-image: linear-gradient(to right bottom, #1d0464, #18055b, 
+    background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
     #140551, #110448, #0f013f);
     background-repeat: no-repeat;
 }
@@ -65,6 +65,6 @@ header h1{
     position: absolute;
     top: 25%;
     left: 60%;
-    height: 600px;
-    width: 600px;
+    height: 550px;
+    width: 550px;
 }
