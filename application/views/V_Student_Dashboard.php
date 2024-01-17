@@ -6,9 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <html>
     <head>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
     </head>
 
 <body>

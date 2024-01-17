@@ -55,7 +55,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
                     <form action="/C_Teacher_Dashboard/logout" method="post">
                     <input type="submit" value="Logout">
-    </form>
+                    </form>
+                    <form action="/C_Teacher_Dashboard/" method="post">
+                    <input type="submit" value="Back">
+                    </form>
 </form>
               
               </div>
