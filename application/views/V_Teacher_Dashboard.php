@@ -102,57 +102,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
-    <table>
-        <thead>
-            <th></th>
 
-            <th>Subject</th>
+    <div class="overflow-auto rounded-lg shadow">
+    <table class="w-full">
+        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+        <tr>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Subject</th>
 
-            <th>Room</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Room</th>
 
-            <th>Schedule</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Schedule</th>
 
-            <th>Year Level</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
 
-            <th>Semester</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
 
-            <th>Section Name</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
+        </tr>   
         </thead>
-        <tbody>
+
+        <tbody class="divide-y divide-gray-100">
             <?php foreach ($schedule_list as $row): ?>
-            <tr>
-                <td class="">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>">Edit</a>
-                </td>
-                <td><?= $row['subject_name'] ?></td>
-                <td><?= $row['room_remarks'] ?></td>
-                <td><?= $row['schedule_remarks'] ?></td>
-                <td><?= $row['year_level'] ?></td>
-                <td><?= $row['semester'] ?></td>
-                <td><?= $row['section_name'] ?></td>
+            <tr class="bg-gray-300">
+                
+                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['room_remarks'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['schedule_remarks'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class "><?= $row['section_name'] ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
+    </div>    
+    </div>
+    <td class="">
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>">Edit</a>
+                </td>
+
 
     <br><br>
-    
-    </div>    
-</div>
+    <form action="/C_Teacher_Dashboard/logout" method="post">
+        <input type="submit" value="Logout">
+    </form>
 
-
-
-
-<script>
-      function toggleProfileDropdown() {
-          var dropdown = document.getElementById("myProfileDropdown");
-          dropdown.classList.toggle("hidden");
-      }
-      function toggleMenuDropdown() {
-          var dropdown = document.getElementById("mobile-menu");
-          dropdown.classList.toggle("hidden");
-      }
-  </script>
 </body>
 
 </html>
