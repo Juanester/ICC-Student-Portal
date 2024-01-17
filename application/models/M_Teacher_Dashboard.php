@@ -22,6 +22,20 @@ class M_Teacher_Dashboard extends CI_Model{
         return $this->db->get()->result_array();
     }
     
+    public function fetchTeacherSchedule($schedule_id){
+        $this->db->select('CONCAT(subject.subject_code, " - ", subject.subject_name) AS subject_name');
+        $this->db->select('schedule.room_remarks');
+        $this->db->select('schedule.schedule_remarks');
+        $this->db->select('schedule.year_level');
+        $this->db->select('section.section_name');
+        $this->db->select('schedule.semester');
+        $this->db->from('schedule');
+        $this->db->join('subject','schedule.subject_id = subject.subject_id','left');
+        $this->db->join('section','schedule.section_id = section.section_id','left');
+        $this->db->where('schedule.schedule_id', $schedule_id);
+        return $this->db->get()->result_array()[0];
+    }
+    
     public function fetchTeacherStudentScheduleList($schedule_id){
 
         $section_id = $this->fetchScheduleSection($schedule_id);
@@ -66,4 +80,8 @@ class M_Teacher_Dashboard extends CI_Model{
         return $this->db->get()->result_array()[0];
     }
     
+    public function updateStudentGrade($batch_condition){
+    
+        $this->db->update_batch('students_schedule', $batch_condition, 'student_schedule_id');
+    }
 }
