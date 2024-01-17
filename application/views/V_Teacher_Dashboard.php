@@ -140,7 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class "><?= $row['section_name'] ?></td>
                 <td class="">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>">Edit</a>
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><pre>   Edit</pre></a>
                 </td>
             </tr>
             <?php endforeach; ?>
