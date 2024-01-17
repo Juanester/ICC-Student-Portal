@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
 </head>
 <body>
        <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
@@ -110,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <table class="w-full">
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Number</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Student Number</pre></th>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Name</th>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
