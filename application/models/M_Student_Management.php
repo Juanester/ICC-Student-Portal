@@ -11,6 +11,7 @@ class M_Student_Management extends CI_Model{
         $this->db->select('last_name');
         $this->db->select('student_number');
         $this->db->select('student_id');
+        $this->db->select('picture');
         $this->db->from('students');
         return $this->db->get()->result_array();
     }
