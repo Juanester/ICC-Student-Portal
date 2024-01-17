@@ -2,9 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-
+<html lang="en">
 <html>
-
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="<?= base_url(); ?>">
+    <link rel="stylesheet" href="css\V_Teacher_Schedule.css">
+</head>
 <body>
 
     <span>Welcome, <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span><br><br>
@@ -54,13 +60,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </table>
 
     <br><br>
-    <form action="/C_Teacher_Dashboard/" method="post">
-        <input type="submit" value="Back">
-    </form>
-    <br><br>
-    <form action="/C_Teacher_Dashboard/logout" method="post">
-        <input type="submit" value="Logout">
-    </form>
+    <div class="back">
+        <form action="/C_Teacher_Dashboard/" method="post">
+                <input  type="submit" value="Back">
+            </form>
+    </div>
+    <div class="logout">
+        <form action="/C_Teacher_Dashboard/logout" method="post">
+                <input  type="submit" value="Logout">
+            </form>
+    </div>
+    
 </body>
 
 </html>
