@@ -6,15 +6,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <html>
     <head>
-    
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     
     <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
 <body>
-<?php
-$imagePath = 'try.webp';
-?>
+
 <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -45,7 +43,7 @@ $imagePath = 'try.webp';
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex flex-shrink-0 items-center">
               
-              <img class="h-8 w-auto" src="<?php echo $imagePath; ?>" alt="Your Image Description">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
