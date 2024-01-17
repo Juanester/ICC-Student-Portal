@@ -60,16 +60,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </table>
 
     <br><br>
-    <div class="back">
-        <form action="/C_Teacher_Dashboard/" method="post">
-                <input  type="submit" value="Back">
+        <form  action="/C_Teacher_Dashboard/" method="post">
+                <input class="back"  type="submit" value="Back">
             </form>
-    </div>
-    <div class="logout">
-        <form action="/C_Teacher_Dashboard/logout" method="post">
-                <input  type="submit" value="Logout">
+        <form  action="/C_Teacher_Dashboard/logout" method="post">
+                <input class="logout"  type="submit" value="Logout">
             </form>
-    </div>
     
 </body>
 

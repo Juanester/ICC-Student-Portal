@@ -52,10 +52,9 @@ input.logout{
     top: 20px;
     right: 30px;
 }
-input, select{
+tr input, select{
     background: none;
     color: yellow;
     border: none;
     text-align: center;
-    
 }
