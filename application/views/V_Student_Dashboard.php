@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <table>
             <thead>
-                <th>Subject</th>
+                <th>Subjects</th>
 
                 <th>Teacher</th>
 
@@ -147,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </form>
 
 
-        
+
         <script>
       function toggleProfileDropdown() {
           var dropdown = document.getElementById("myProfileDropdown");
