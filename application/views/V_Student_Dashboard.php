@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
 <body>
-
+<!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
 <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -96,33 +96,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </nav>
 
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-
-
-
+    <span>Welcomee, <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?></span><br><br>
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
         <table>
-            <thead>
-                <th>Subjects</th>
+            <thead class="bg-gray-200 border-b-2 border-gray-200">
+                <tr>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Subjects</th>
 
-                <th>Teacher</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Teacher</th>
 
-                <th>Year Level</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
 
-                <th>Semester</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
 
-                <th>Preliminary Grade</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
 
-                <th>Midterm Grade</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
 
-                <th>Finals Grade</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
                 
-                <th>Grade</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
 
-                <th>Remarks</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
+                </tr>
             </thead>
+
             <tbody>
                 <?php foreach ($student_grade_list as $row): ?>
-                  <tr>
+
+                  <tr class="bg-gray-500">
                     <td><?= $row['subject_name'] ?></td>
                     <td><?= $row['employee_name'] ?></td>
                     <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
@@ -133,16 +138,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?= $row['grade'] ?></td>
                     <td><?= $row['grade_remarks_name'] ?></td>
                   </tr>
+
                 <?php endforeach; ?>
             </tbody>
         </table>
 
         <br><br>
 
-        
+        </div>
+        </div>
+
+        <form action="/C_Student_Dashboard/logout" method="post">
+            <input type="submit" value="Logout">
+        </form>
 
 
-
+<!-- -------------------------------------------------------------------------------------JS FOR NAV BAR------------------------------------------------------------------------------------------------------------------------ -->
         <script>
       function toggleProfileDropdown() {
           var dropdown = document.getElementById("myProfileDropdown");
@@ -153,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           dropdown.classList.toggle("hidden");
       }
   </script>
-
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 </body>
 
 </html>
