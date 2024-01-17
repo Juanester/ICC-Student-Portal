@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex flex-shrink-0 items-center">
               
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            <img src="<?php echo base_url();?>images/icc.png" alt="" style="width: 50px;">
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <button type="button" onclick="toggleProfileDropdown()" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
-                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                  <img src="<?php echo base_url();?>images/profile.png" alt="" style="width: 55px;">
                 </button>
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
@@ -138,6 +138,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?= $row['final_grade'] ?></td>
                     <td><?= $row['grade'] ?></td>
                     <td><?= $row['grade_remarks_name'] ?></td>
+                    
                   </tr>
 
                 <?php endforeach; ?>
