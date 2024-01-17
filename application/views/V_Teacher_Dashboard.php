@@ -113,17 +113,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <table class="w-full">
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
         <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Subject</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>Subject</pre></th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Room</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Room</pre></th>
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Schedule</pre></th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Year Level</pre></th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Semester</pre></th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section Name</pre></th>
 
              <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"></th>
         </tr>   

@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <table class="w-full">
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Student Number</pre></th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>  Student Number</pre></th>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Name</th>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
@@ -127,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php foreach ($teacher_student_schedule_list as $row): ?>
             <tr class="bg-gray-300">
                 <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
-                <td><?= $row['student_number'] ?></td>
+                <td><pre>     <?= $row['student_number'] ?></pre></td>
                 <td><?= $row['student_name'] ?></td>
                 <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
                 </td>
