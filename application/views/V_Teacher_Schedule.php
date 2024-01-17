@@ -101,22 +101,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <span>Welcome, <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span><br><br>
 
-    <table>
-        <thead>
-            <th>Student Number</th>
-            <th>Student Name</th>
-            <th>Year Level</th>
-            <th>Section Name</th>
-            <th>Status</th>
-            <th>Preliminary Grade</th>
-            <th>Midterm Grade</th>
-            <th>Finals Grade</th>
-            <th>Grade</th>
-            <th>Remarks</th>
-        </thead>
-        <tbody>
-            <?php foreach ($teacher_student_schedule_list as $row): ?>
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="overflow-auto rounded-lg shadow">
+            <table class="w-full">
+        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Number</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Name</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Status</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+            <?php foreach ($teacher_student_schedule_list as $row): ?>
+            <tr class="bg-gray-300">
                 <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
                 <td><?= $row['student_number'] ?></td>
                 <td><?= $row['student_name'] ?></td>
@@ -144,6 +149,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php endforeach; ?>
         </tbody>
     </table>
+            </div>
+        </div>
+    </div>
 
     <br><br>
         <form  action="/C_Teacher_Dashboard/" method="post">
