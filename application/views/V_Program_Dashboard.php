@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            
+          
     
             <!-- Profile dropdown -->
             
@@ -51,16 +51,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-               <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
+               <span> <?= $MIS_info['first_name'] . ' ' . $MIS_info['last_name'] ?></span>
                <br>
                           <form action="/C_MIS_Dashboard/logout" method="post">
-                          <div class="hover:text-blue-500 ">
-                          <input class="hover:font-bold block pr-12 text-sm text-gray-700 hover:text-blue-800" type="submit" value="Logout">
+                          <div>
+                          <input class="hover:font-bold block pr-12 text-sm text-gray-700" type="submit" value="Logout">
                           </div>
                           </form>
-              </div>
-
-              
               </div>
             </div>
           
@@ -71,51 +68,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
+                      
+
+
+
+
+
+
 
 
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
+        <div class="relative flex h-16 items-center justify-between">
+        <div class="overflow-auto rounded-lg shadow mt-40">
+        <table class="w-full">
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>  Employee</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Employee Name</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Course ID</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Course</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section ID</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Course ID</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Section Name</pre></th>
 
-    <div class="overflow-auto rounded-lg shadow mt-20">
-    <table class="w-full">
-        <thead class="bg-gray-200 border-b-2 ">
-        <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>Subject</pre></th>
+                
+                </tr>
+            </thead>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Room</pre></th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Schedule</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Year Level</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Semester</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section Name</pre></th>
-
-             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"></th>
-        </tr>   
-        </thead>
-
-        <tbody class="divide-y divide-gray-100">
-            <?php foreach ($schedule_list as $row): ?>
-            <tr class="bg-gray-300">
             
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['room_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['schedule_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>    <?= $row['year_level'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['semester'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>  <?= $row['section_name'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class ">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+        </table>
+        </div>
     </div>
-    </div>    
-    </div>
+
+
+
  
 
 
@@ -126,10 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           var dropdown = document.getElementById("myProfileDropdown");
           dropdown.classList.toggle("hidden");
       }
-      function toggleMenuDropdown() {
-          var dropdown = document.getElementById("mobile-menu");
-          dropdown.classList.toggle("hidden");
-      }
+    
   </script>
 </body>
 

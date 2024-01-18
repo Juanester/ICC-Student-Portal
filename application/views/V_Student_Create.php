@@ -21,6 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </script>
 </head>
 <body>
+  <header>
+        <h1>Immaculada Concepcion College</h1>
+    </header>
 
             <main>
                 <div class="logo">
