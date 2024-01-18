@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/fontawesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4-navbar/4.3.1/css/bootstrap-4-navbar.min.css">
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/Student_Login.css?<?= filemtime('css/Student_Login.css'); ?>">
 </head>
  
