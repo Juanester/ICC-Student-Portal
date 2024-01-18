@@ -36,14 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form action="/C_Student_Login/studentLogin" method="post">
                     <div class="inputdiv">
                         <label for="student_number">Student Number</label><br>
-                        <input type="text" id="student_number" name="student_number" value=""><br>
+                        <input  class="text-gray-800" type="text" id="student_number" name="student_number" value=""><br>
                     </div>
                     <div class="inputdiv">
                         <label for="password">Password</label><br>
                         <input type="password" id="password" name="password" value="" maxlength="12" require><br><br>
                     </div>
                     <div class="login_button_container">
-                        <input class="login_button" type="submit" value="Login">
+                        <input class="login_button hover:bg-blue-200 hover:text-gray-900" type="submit" value="Login">
                     </div>
                 </form>
             </div>
