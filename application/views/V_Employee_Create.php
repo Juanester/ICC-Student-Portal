@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="inputdiv">
     <label for="employee_id" >Employee:</label><br>
-    <select id="employee_id" name="employee_id">
+    <select class="text-gray-800" id="employee_id" name="employee_id">
         <option value="" hidden>-</option>
         <?php foreach ($employee_list as $option) : ?>
         <option value="<?= $option['employee_id'] ?>">
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="inputdiv">
     <label for="access_role_id">Access Roles:</label><br>
-    <select id="access_role_id" name="access_role_id">
+    <select class="text-gray-800" id="access_role_id" name="access_role_id">
         <option value="" hidden>-</option>
         <?php foreach ($access_role_list as $option) : ?>
         <option value="<?= $option['access_role_id'] ?>">
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <input type="password" id="password" name="password" value=""><br><br>
     </div>        
 
-    <input type="submit" value="Create">    
+    <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create">    
     </form>
     </div>
     </div>
