@@ -8,9 +8,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="lib/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="lib/fontawesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4-navbar/4.3.1/css/bootstrap-4-navbar.min.css">
+    <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
     <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
 <script>
   function passlength(){
@@ -28,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <img src="images\icc logo.webp" alt="logo">
   </div>
     <div class="login">
-        <h2>CREATE STUDENT ACCOUNT</h2>  
+        <h2>CREATE STUDENT ACCOUNT</h2>   
         <form action=/C_Student_Management/studentCreate method="post" target="_self">
         <div class="inputdiv">
         <label for="student_id">Student:</label><br>

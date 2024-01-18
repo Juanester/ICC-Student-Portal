@@ -21,7 +21,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-    
     <header>
         <h1>Immaculada Concepcion College</h1>
     </header>
@@ -34,12 +33,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h2>Student portal account</h2>
                 <span><?= !empty($message) ? $message : '' ?></span>
                 <form action="/C_Student_Login/studentLogin" method="post">
-                    <label for="student_number">Student Number</label><br>
-                    <input type="text" id="student_number" name="student_number" value=""><br>
-                    <label for="password">Password</label><br>
-                    <input type="password" id="password" name="password" value=""><br><br>
+                    <div class="inputdiv">
+                        <label for="student_number">Student Number</label><br>
+                        <input type="text" id="student_number" name="student_number" value=""><br>
+                    </div>
+                    <div class="inputdiv">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" name="password" value="" maxlength="12" require><br><br>
+                    </div>
                     <div class="login_button_container">
-                        <!-- Center the login button -->
                         <input class="login_button" type="submit" value="Login">
                     </div>
                 </form>

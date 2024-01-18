@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 html{
     width: 100%;
@@ -39,6 +41,7 @@ header h1{
     left: 50vw;
     width: 30%;
     margin: auto;
+    pointer-events: none;
 }
 .login h2{
     font-size: 25px;
@@ -59,6 +62,9 @@ header h1{
     padding: 5px 10px;
     margin-bottom: 10px;
     border: none;
+}
+.login .login_button:active{
+    color: whitesmoke;
 }
 .login span{
     display: flex;

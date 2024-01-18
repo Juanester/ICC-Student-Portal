@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 html{
     width: 100%;
@@ -39,6 +41,7 @@ header h1{
     left: 50vw;
     width: 30%;
     margin: auto;
+    pointer-events: none;
 }
 .login h2{
     font-size: 25px;
@@ -80,6 +83,10 @@ textarea:focus, input:focus {
 input.create{
     font-size: 15px;
     color: yellow;
+    cursor: pointer;
+}
+input.create:active{
+    color: whitesmoke;
 }
 #student_id, #password{
     color: #000000;
