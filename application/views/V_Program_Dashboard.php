@@ -37,13 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">View notifications</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-              </svg>
-            </button>
+          
     
             <!-- Profile dropdown -->
             
@@ -55,17 +49,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                      <span> <?= $MIS_info['first_name'] . ' ' . $MIS_info['last_name'] ?></span>
-                    <form action="/C_MIS_Dashboard/logout" method="post">
-                      <br>
-                    <div class="hover:text-blue-500 ">
-                      <input class="hover:font-bold" type="submit" value="         Logout">
-                    </div>
-    </form>
-</form>
-              
+               <span> <?= $MIS_info['first_name'] . ' ' . $MIS_info['last_name'] ?></span>
+               <br>
+                          <form action="/C_MIS_Dashboard/logout" method="post">
+                          <div>
+                          <input class="hover:font-bold block pr-12 text-sm text-gray-700" type="submit" value="Logout">
+                          </div>
+                          </form>
               </div>
             </div>
           
@@ -76,6 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
+                      
 
 
 
@@ -120,10 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           var dropdown = document.getElementById("myProfileDropdown");
           dropdown.classList.toggle("hidden");
       }
-      function toggleMenuDropdown() {
-          var dropdown = document.getElementById("mobile-menu");
-          dropdown.classList.toggle("hidden");
-      }
+    
   </script>
 </body>
 
