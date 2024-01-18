@@ -24,7 +24,7 @@ header h1{
 .login{
     width: 30%;
     height: auto;
-    color: whitesmoke;
+    color: rgb(192, 119, 119);
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     justify-content: center;
