@@ -100,22 +100,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </thead>
 
         <tbody class="divide-y divide-gray-100">
+          <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
+              <input class="hover:font-bold" type="submit" value="save">
+              <input type="hidden" name="schedule_id" value="<?=$schedule_id?>">
             <?php foreach ($teacher_student_schedule_list as $row): ?>
+              
+              
             <tr class="bg-gray-300">
 
-                <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
+                <input type="hidden" name=student_schedule_id[] value="<?= $row['student_schedule_id'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>      <?= $row['student_number'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['student_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
                 </td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="prelim_grade[]" value="<?= $row['prelim_grade'] ?>">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="midterm_grade[]" value="<?= $row['midterm_grade'] ?>">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="final_grade[]" value="<?= $row['final_grade'] ?>">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="grade[]" value="<?= $row['grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="prelim_grade[]" value="<?= $row['prelim_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="midterm_grade[]" value="<?= $row['midterm_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="final_grade[]" value="<?= $row['final_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="grade[]" value="<?= $row['grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200">
-                    <select type="" name="grade_remarks[]" value="<?= $row['grade_remarks_id'] ?>">
+                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>">
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
                         <option value="<?= $option['grade_remarks_id'] ?>"
@@ -127,8 +132,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </td>
 
             </tr>
+            
             <?php endforeach; ?>
+            </form>
         </tbody>
+        
     </table>
             </div>
         </div>
