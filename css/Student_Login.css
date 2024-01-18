@@ -1,16 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 html{
     width: 100%;
     height: 100%;
 }
 body{
-    background-image: linear-gradient(to right bottom, #1d0464, #18055b, 
+    background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
     #140551, #110448, #0f013f);
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 header{
     color: whitesmoke;
@@ -23,18 +26,19 @@ header h1{
     padding: 10px 15px 10px 50px;
 }
 .login{
-    width: 30%;
-    height: auto;
+    width: 50%;
     color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     justify-content: center;
     margin: auto;
-    box-shadow: 10px 10px 15px 5px black;
     margin-top: 15%;
-    z-index: 100;
     position: absolute;
-    left: 10%;
+}
+.logo img{
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    width: 30%;
+    margin: auto;
 }
 .login h2{
     font-size: 25px;
@@ -50,22 +54,59 @@ header h1{
     padding: 5px;
 }
 .login .login_button{
-    border-radius: 5px;
     background: none;
-    color: whitesmoke;
+    color: yellow;
     padding: 5px 10px;
     margin-bottom: 10px;
+    border: none;
 }
 .login span{
     display: flex;
     justify-content:center;
     color: yellow;
 }
-.logo img{
-    z-index: -1;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    /* height: 20%; */
-    width: 40%;
+select, input, textarea, option{
+    width: 185px;
+    height: 28px;
+    border-radius: 5px;
+    color: #000000;
+}
+textarea:focus, input:focus {
+    color: #000000;
+}
+.inputdiv{
+    margin: 10px;
+}
+input.create{
+    font-size: 15px;
+    color: yellow;
+}
+#student_id, #password{
+    color: #000000;
+    padding: 2px 4px;
+}
+@media screen and (min-width: 600px) {
+    .logo img{
+        top: 20vh;
+        left: 50vw;
+        width: 30%;
+    }
+    .login{
+        top: 10vh;
+        left: 10vw;
+        width: 50%;
+    }
+  }
+  
+@media screen and (max-width: 1000px) {
+    .logo img{
+        top: 15%;
+        left: 35%;
+        width: 30%;
+    }
+    .login{
+        top: 30%;
+        left: 25%;
+        width: 50%;
+    }
 }

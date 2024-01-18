@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
+    
     <header>
         <h1>Immaculada Concepcion College</h1>
     </header>
