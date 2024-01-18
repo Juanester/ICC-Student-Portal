@@ -1,32 +1,32 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_Mis_Dashboard extends CI_Controller {
+class C_MIS_Dashboard extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
-        $this->load->model('M_Employee_Management');
+        
+        if(empty($_SESSION['employee_id'])){
+            redirect('C_Employee_Login');
+        }
+        
+        $this->load->model('M_MIS_Dashboard');
+
     }
 
-	public function index()
-	{
-        $employee_list = $this->M_Employee_Management->fetchEmployee();
-        $access_role_list = $this->M_Employee_Management->fetchAccessRoles();
+    public function index(){
         
-        $data = array(
-            'employee_list'=> $employee_list,
-            'access_role_list'=> $access_role_list
+        $employee_id = $this->session->userdata('employee_id');
+        $MIS_info = $this->M_MIS_Dashboard->fetchRegistrarInfo($employee_id);
+        
+        $data = array( 
+            'MIS_info' => $MIS_info
         );
+		$this->load->view('V_MIS_Dashboard', $data);
+    }
 
-		$this->load->view('V_Employee_Create', $data);
-	}
-
-	public function employeeCreate()
-	{
-        $employee_id = $this->input->post('employee_id');
-        $access_role_id = $this->input->post('access_role_id');
-        $password = md5($this->input->post('password'));
-
-        $this->M_Employee_Management->employeeCreate($employee_id, $access_role_id, $password);
-	}
+    public function logout(){
+        $this->session->unset_userdata('employee_id');
+        redirect($_SERVER['REQUEST_URI'], 'refresh'); 
+    }
 }
