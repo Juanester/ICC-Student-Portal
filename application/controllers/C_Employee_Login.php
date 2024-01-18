@@ -13,6 +13,8 @@ class C_Employee_Login extends CI_Controller {
                 redirect('/C_Teacher_Dashboard/index');
             }if($_SESSION['access_role_id'] == REGISTRAR_ACCESS){
                 redirect('/C_Registrar_Dashboard/index');
+            }if($_SESSION['access_role_id'] == PROGRAM_HEAD_ACCESS){
+                redirect('/C_Registrar_Dashboard/index');
             }
         }
 
