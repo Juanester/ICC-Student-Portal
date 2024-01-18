@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form action="/C_Employee_Login/employeeLogin" method="post">
                     <div class="inputdiv">
                         <label for="employee_number">Employee Number</label><br>
-                        <input type="text" id="employee_number" name="employee_number" value=""><br>
+                        <input class="text-gray-800" type="text" id="employee_number" name="employee_number" value=""><br>
                     </div>
                     <div class="inputdiv">
                         <label for="password">Password</label><br>
