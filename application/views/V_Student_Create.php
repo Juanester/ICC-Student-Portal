@@ -18,11 +18,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
     <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  function passlength(){
-    document.getElementById("password").maxLength = "12";
-
-  }
 </script>
 </head>
 <body>
@@ -52,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="inputdiv">
         <label for="password">Password</label><br>
-        <input type="password" id="password" name="password" value=""><br><br>
+        <input type="password" id="password" name="password" value="" maxlength="12" require><br><br>
 
         <input class="hover:bg-blue-200 hover:text-gray-900" type="submit" value="Create">
         </form>

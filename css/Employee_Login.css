@@ -28,13 +28,14 @@ header h1{
     padding: 10px 15px 10px 50px;
 }
 .login{
-    width: 50%;
+    width: 25%;
     color: whitesmoke;
     justify-content: center;
     margin: auto;
     margin-top: 15%;
-    position: absolute;
-    border: solid;
+    position: absolute; 
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 5px;
 }
 .logo img{
     position: absolute;
@@ -73,8 +74,8 @@ header h1{
     color: yellow;
 }
 select, input, textarea, option{
-    width: 185px;
-    height: 28px;
+    /* width: 185px;
+    height: 28px; */
     border-radius: 5px;
     color: #000000;
 }
@@ -100,8 +101,14 @@ input.create{
     }
     .login{
         top: 10vh;
-        left: 10vw;
-        width: 50%;
+        left: 20vw;
+        width: 25%;
+    }
+    select, input, textarea, option{
+        width: 185px;
+        height: 28px;
+        border-radius: 5px;
+        color: #000000;
     }
   }
   
@@ -112,8 +119,15 @@ input.create{
         width: 30%;
     }
     .login{
-        top: 30%;
-        left: 25%;
+        top: 33%;
+        left: 26%;
         width: 50%;
+        height: 40%;
+    }
+    select, input, textarea, option{
+        width: 70%;
+        height: 10%;
+        border-radius: 5px;
+        color: #000000;
     }
 }
