@@ -4,34 +4,64 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 
 <html>
-
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<base href="<?= base_url(); ?>">
+<link rel="stylesheet" href="css\V_Employee_Create.css">
+<script src="https://cdn.tailwindcss.com"></script> 
+</head>
 <body>
+<main>
+    <header>
+        <h1>Immaculada Concepcion College</h1>
+    </header>
+    
+    <div class="logo">
+        <img src="images\icc logo.webp" alt="logo">
+    </div>
 
+    <div class="login">
     <form action=/C_Employee_Management/employeeCreate method="post" target="_self">
+    <h2>CREATE EMPLOYEE ACCOUNT</h2>
 
-        <label for="employee_id">Employee:</label><br>
-        <select id="employee_id" name="employee_id">
-            <option value="" hidden>-</option>
-            <?php foreach ($employee_list as $option) : ?>
-            <option value="<?= $option['employee_id'] ?>">
-                <?= $option['employee_number'] . ' - ' . $option['first_name'] . ' ' . $option['last_name'] ?>
-            </option>
-            <?php endforeach; ?>
-        </select><br>
-        <label for="access_role_id">Access Roles:</label><br>
-        <select id="access_role_id" name="access_role_id">
-            <option value="" hidden>-</option>
-            <?php foreach ($access_role_list as $option) : ?>
-            <option value="<?= $option['access_role_id'] ?>">
-                <?= $option['access_role_id'] . ' - ' . $option['access_role_name'] ?>
-            </option>
-            <?php endforeach; ?>
-        </select><br>
-        <label for="password">Password</label><br>
+    <div class="inputdiv">
+    <label for="employee_id" >Employee:</label><br>
+    <select id="employee_id" name="employee_id">
+        <option value="" hidden>-</option>
+        <?php foreach ($employee_list as $option) : ?>
+        <option value="<?= $option['employee_id'] ?>">
+        <?= $option['employee_number'] . ' - ' . $option['first_name'] . ' ' . $option['last_name'] ?>
+        </option>
+        <?php endforeach; ?>
+    </select><br>
+    </div>
+
+    <div class="inputdiv">
+    <label for="access_role_id">Access Roles:</label><br>
+    <select id="access_role_id" name="access_role_id">
+        <option value="" hidden>-</option>
+        <?php foreach ($access_role_list as $option) : ?>
+        <option value="<?= $option['access_role_id'] ?>">
+        <?= $option['access_role_id'] . ' - ' . $option['access_role_name'] ?>
+        </option>
+        <?php endforeach; ?>
+    </select><br>
+    </div>
+
+    <div class="inputdiv">
+        <label for="password" class="block text-base">Password</label>
         <input type="password" id="password" name="password" value=""><br><br>
+    </div>        
 
-        <input type="submit" value="Create">
+    <input type="submit" value="Create">    
     </form>
+    </div>
+    </div>
+
+    </div>
+    </div>
 
 </body>
 

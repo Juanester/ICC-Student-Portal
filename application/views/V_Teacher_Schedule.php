@@ -17,7 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-
+<!-- -----------------------------BACK---------------------------------------------- -->
+            
+             <!-- --------------------------------------------------------------------------- -->
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             
             <div class="flex flex-shrink-0 items-center">
@@ -32,14 +34,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">View notifications</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          <form action="/C_Teacher_Dashboard/" method="post">
+            <button type="submit" class=" text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                 <path fill-rule="evenodd" d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z" clip-rule="evenodd" />
               </svg>
             </button>
-    
+            </form>
             <!-- Profile dropdown -->
             
             <div class="relative ml-3">
@@ -50,16 +53,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                       <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
                     <form action="/C_Teacher_Dashboard/logout" method="post">
-                    <input type="submit" value="Logout">
+                    <br>
+                    <div class="hover:text-blue-500 ">
+                    <input class="hover:font-bold" type="submit" value="         Logout">
                     </form>
-                    <form action="/C_Teacher_Dashboard/" method="post">
-                    <input type="submit" value="Back">
-                    </form>
-</form>
+                    
+                  
+                    
+
               
               </div>
             </div>
@@ -76,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           
-            <div class="overflow-auto rounded-lg shadow mt-40">
+            <div class=" mt-40">
             <table class="w-full">
 
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
@@ -95,22 +100,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </thead>
 
         <tbody class="divide-y divide-gray-100">
+          <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
+              <input class="hover:font-bold" type="submit" value="save">
+              <input type="hidden" name="schedule_id" value="<?=$schedule_id?>">
             <?php foreach ($teacher_student_schedule_list as $row): ?>
+              
+              
             <tr class="bg-gray-300">
 
-                <input type="hidden" name=student_schedule_id value="<?= $row['student_schedule_id'] ?>">
-                <td><pre>      <?= $row['student_number'] ?></pre></td>
-                <td><?= $row['student_name'] ?></td>
-                <td><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
+                <input type="hidden" name=student_schedule_id[] value="<?= $row['student_schedule_id'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>      <?= $row['student_number'] ?></pre></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['student_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?>
                 </td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="prelim_grade[]" value="<?= $row['prelim_grade'] ?>">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="midterm_grade[]" value="<?= $row['midterm_grade'] ?>">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="final_grade[]" value="<?= $row['final_grade'] ?>">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number" name="grade[]" value="<?= $row['grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="prelim_grade[]" value="<?= $row['prelim_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="midterm_grade[]" value="<?= $row['midterm_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="final_grade[]" value="<?= $row['final_grade'] ?>">
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="grade[]" value="<?= $row['grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200">
-                    <select type="" name="grade_remarks[]" value="<?= $row['grade_remarks_id'] ?>">
+                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>">
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
                         <option value="<?= $option['grade_remarks_id'] ?>"
@@ -122,8 +132,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </td>
 
             </tr>
+            
             <?php endforeach; ?>
+            </form>
         </tbody>
+        
     </table>
             </div>
         </div>

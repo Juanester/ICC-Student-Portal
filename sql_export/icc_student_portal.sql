@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2024 at 03:18 AM
+-- Generation Time: Jan 18, 2024 at 07:28 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -83,7 +83,8 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`employee_id`, `employee_number`, `first_name`, `middle_name`, `last_name`) VALUES
 (1, '9999-9999', 'John', 'Doe', 'Doe'),
 (2, '9998-0000', 'Mark', 'Red', 'Blue'),
-(3, '0010-0000', 'Tan', 'MIS', 'Pariente');
+(3, '0010-0000', 'Tan', 'MIS', 'Pariente'),
+(4, '0020-0000', 'Program', 'M', 'Head');
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,10 @@ CREATE TABLE `employee_user` (
 
 INSERT INTO `employee_user` (`employee_user_id`, `employee_id`, `access_role_id`, `password`) VALUES
 (6, 1, 1, '202cb962ac59075b964b07152d234b70'),
-(9, 2, 1, '202cb962ac59075b964b07152d234b70');
+(9, 2, 1, '202cb962ac59075b964b07152d234b70'),
+(10, 0, 0, 'd41d8cd98f00b204e9800998ecf8427e'),
+(11, 3, 4, '202cb962ac59075b964b07152d234b70'),
+(13, 4, 2, '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -372,13 +376,13 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `employee_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `employee_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employee_user`
 --
 ALTER TABLE `employee_user`
-  MODIFY `employee_user_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `employee_user_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `grade_remarks`

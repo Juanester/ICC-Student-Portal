@@ -22,6 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             
+
             <div class="flex flex-shrink-0 items-center">
               
             <img src="<?php echo base_url();?>images/iccl.webp" alt="" style="width: 50px;">
@@ -34,13 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">View notifications</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-              </svg>
-            </button>
+            
     
             <!-- Profile dropdown -->
             
@@ -52,13 +47,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                       <span> <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?></span>
                     <form action="/C_student_Dashboard/logout" method="post">
-                    <input type="submit" value="Logout">
+                      <br>
+                      <div class="hover:text-blue-500 ">
+                    <input class="hover:font-bold" type="submit" value="         Logout">
     </form>
-</form>
+    </div>
+
               
               </div>
             </div>
@@ -101,15 +99,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php foreach ($student_grade_list as $row): ?>
 
                   <tr class="bg-gray-300">
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['subject_name'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['employee_name'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['semester'] == 1 ? '1st Semester' : ($row['semester'] == 2 ? '2nd Semester' : ($row['semester'] == 3 ? '3rd Semester' : '4th Semester')) ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['prelim_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['midterm_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['final_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class "><?= $row['grade_remarks_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['semester'] == 1 ? '1st Semester' : ($row['semester'] == 2 ? '2nd Semester' : ($row['semester'] == 3 ? '3rd Semester' : '4th Semester')) ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['prelim_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['midterm_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['final_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade_remarks_name'] ?></td>
                   </tr>
 
                 <?php endforeach; ?>

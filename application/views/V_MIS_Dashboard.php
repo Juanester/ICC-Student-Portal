@@ -51,14 +51,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                      <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
-                    <form action="/C_Teacher_Dashboard/logout" method="post">
-                     
+                      <span> <?= $MIS_info['last_name'] . ', ' . $MIS_info['first_name'] ?></span>
+                    <form action="/C_MIS_Dashboard/logout" method="post">
+                      <br>
                     <div class="hover:text-blue-500 ">
-                      <input class="hover:font-bold" type="submit" value="Logout">
+                      <input class="hover:font-bold" type="submit" value="         Logout">
                     </div>
     </form>
-
+</form>
               
               </div>
             </div>
@@ -71,50 +71,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
+<form action="/C_Student_Management/" method="post">
+                    <input class="hover:font-bold text-xl text-gray-200" type="submit" value="Create Student">
+</form>
 
-    <div class="overflow-auto rounded-lg shadow mt-20">
-    <table class="w-full">
-        <thead class="bg-gray-200 border-b-2 ">
-        <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>Subject</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Room</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Schedule</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Year Level</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Semester</pre></th>
-
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section Name</pre></th>
-
-             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"></th>
-        </tr>   
-        </thead>
-
-        <tbody class="divide-y divide-gray-100">
-            <?php foreach ($schedule_list as $row): ?>
-            <tr class="bg-gray-300">
-            
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['room_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['schedule_remarks'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>    <?= $row['year_level'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['semester'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>  <?= $row['section_name'] ?></pre></td>
-                <td class="p-3 text-sm whitespace-nowrap class ">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+<form action="/C_Employee_Management/" method="post">
+                    <input class="hover:font-bold text-xl text-gray-200" type="submit" value="Create Employee">
+</form>
     </div>
-    </div>    
-    </div>
+</div>
  
 
 
@@ -125,10 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           var dropdown = document.getElementById("myProfileDropdown");
           dropdown.classList.toggle("hidden");
       }
-      function toggleMenuDropdown() {
-          var dropdown = document.getElementById("mobile-menu");
-          dropdown.classList.toggle("hidden");
-      }
+    
   </script>
 </body>
 
