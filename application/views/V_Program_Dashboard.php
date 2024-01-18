@@ -79,6 +79,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+
+
+
+
+
+<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+        <div class="overflow-auto rounded-lg shadow mt-40">
+        <table class="w-full">
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>  Employee</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Employee Name</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Course ID</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Course</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section ID</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Course ID</pre></th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Section Name</pre></th>
+
+                
+                </tr>
+            </thead>
+
+
+            
+        </table>
+        </div>
+    </div>
+
+
+
  
 
 

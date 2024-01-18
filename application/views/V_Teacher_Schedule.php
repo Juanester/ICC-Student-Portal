@@ -98,6 +98,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
             </tr>
         </thead>
+        <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
+              <input class="hover:font-bold" type="submit" value="save">
 
         <tbody class="divide-y divide-gray-100">
           <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
