@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/fontawesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4-navbar/4.3.1/css/bootstrap-4-navbar.min.css">
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/Employee_Login.css?<?= filemtime('css/Employee_Login.css'); ?>">
 </head>
 
@@ -35,12 +36,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span><?= !empty($message) ? $message : '' ?></span>
                 <form action="/C_Employee_Login/employeeLogin" method="post">
                     <label for="employee_number">Employee Number</label><br>
-                    <input type="text" id="employee_number" name="employee_number" value=""><br>
+                    <input class="text-gray-800" type="text" id="employee_number" name="employee_number" value=""><br>
                     <label for="password">Password</label><br>
-                    <input type="password" id="password" name="password" value=""><br><br>
+                    <input class="text-gray-800" type="password" id="password" name="password" value=""><br><br>
                     <div class="login_button_container">
                         <!-- Center the login button -->
-                        <input class="login_button" type="submit" value="Login">
+                        <input class="login_button hover:bg-blue-200 hover:text-gray-900" type="submit" value="Login">
                     </div>
                 </form>
             </div>
