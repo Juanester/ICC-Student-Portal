@@ -15,6 +15,8 @@ class C_Employee_Login extends CI_Controller {
                 redirect('/C_Registrar_Dashboard/index');
             }if($_SESSION['access_role_id'] == MIS_ACCESS){
                 redirect('/C_MIS_Dashboard/index');
+            }if($_SESSION['access_role_id'] == PROGRAM_HEAD_ACCESS){
+                redirect('/C_Program_Dashboard/index');
             }
         }
 
@@ -52,6 +54,8 @@ class C_Employee_Login extends CI_Controller {
                 redirect('C_Registrar_Dashboard/index');
             }else if($employee_info['access_role_id'] == MIS_ACCESS){
                 redirect('C_MIS_Dashboard/index');
+            }else if($employee_info['access_role_id'] == PROGRAM_HEAD_ACCESS){
+                redirect('C_Program_Dashboard/index');
             }
         } else{
             $this->session->set_flashdata('message','Incorrect login and password');
