@@ -57,8 +57,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                      <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
-                    <form action="/C_Teacher_Dashboard/logout" method="post">
+                      <span> <?= $MIS_info['last_name'] . ', ' . $MIS_info['first_name'] ?></span>
+                    <form action="/C_MIS_Dashboard/logout" method="post">
                       <br>
                     <div class="hover:text-blue-500 ">
                       <input class="hover:font-bold" type="submit" value="         Logout">
@@ -78,13 +78,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<form action="/C_Teacher_Management/" method="post">
+<form action="/C_Student_Management/" method="post">
                     <input class="hover:font-bold" type="submit" value="Create Student">
-
+</form>
 
 <form action="/C_Employee_Management/" method="post">
                     <input class="hover:font-bold" type="submit" value="Create Employee">
-
+</form>
  
 
 
