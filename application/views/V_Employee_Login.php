@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
+<html> 
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="<?= base_url(); ?>">
 
     <link rel="stylesheet" href="lib/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -22,7 +22,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-
     <header>
         <h1>Immaculada Concepcion College</h1>
     </header>
@@ -35,10 +34,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h2>Employee Portal Account</h2>
                 <span><?= !empty($message) ? $message : '' ?></span>
                 <form action="/C_Employee_Login/employeeLogin" method="post">
-                    <label for="employee_number">Employee Number</label><br>
-                    <input class="text-gray-800" type="text" id="employee_number" name="employee_number" value=""><br>
-                    <label for="password">Password</label><br>
-                    <input class="text-gray-800" type="password" id="password" name="password" value=""><br><br>
+                    <div class="inputdiv">
+                        <label for="employee_number">Employee Number</label><br>
+                        <input type="text" id="employee_number" name="employee_number" value=""><br>
+                    </div>
+                    <div class="inputdiv">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" name="password" value="" maxlength="12" require><br><br>
+                    </div>
                     <div class="login_button_container">
                         <!-- Center the login button -->
                         <input class="login_button hover:bg-blue-200 hover:text-gray-900" type="submit" value="Login">

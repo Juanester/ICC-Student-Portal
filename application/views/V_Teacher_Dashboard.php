@@ -53,12 +53,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                       <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
                     <form action="/C_Teacher_Dashboard/logout" method="post">
-                      <br>
+                     
                     <div class="hover:text-blue-500 ">
-                      <input class="hover:font-bold" type="submit" value="         Logout">
+                      <input class="hover:font-bold" type="submit" value="Logout">
                     </div>
     </form>
-</form>
+
               
               </div>
             </div>
