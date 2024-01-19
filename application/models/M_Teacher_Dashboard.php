@@ -14,7 +14,7 @@ class M_Teacher_Dashboard extends CI_Model{
         $this->db->select('schedule.year_level');
         $this->db->select('section.section_name');
         $this->db->select('schedule.semester');
-        $this->db->from('schedule');
+        $this->db->from('schedule'); 
         $this->db->join('subject','schedule.subject_id = subject.subject_id','left');
         $this->db->join('section','schedule.section_id = section.section_id','left');
         $this->db->where('schedule.employee_id', $employee_id);

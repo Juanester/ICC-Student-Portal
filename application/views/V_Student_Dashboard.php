@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
+    <link rel="stylesheet" href="css\V_Student_Dashboard.css?<?= filemtime('css\V_Student_Dashboard.css'); ?>">
     </head>
 
 <body>
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             
     
-            <!-- Profile dropdown -->
+            <!-- Profile dropdown --> 
             
             <div class="relative ml-3">
               <div>
@@ -69,10 +69,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-    
+    <div class="seperator">
+      <label for="year_level">Select Year Level: </label>
+        <select id="year_level" require>
+          <option value="" selected disabled hidden>Please select</option>
+          <option value="1">First Year</option>
+          <option value="2">Second Year</option>
+          <option value="3">Third Year</option>
+          <option value="4">Fourth Year</option>
+        </select>
+    </div>
+
+
+
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
         <div class="overflow-auto rounded-lg shadow mt-40">
+
         <table class="w-full">
             <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
@@ -114,6 +127,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         </div>
         </div>
         </div>
