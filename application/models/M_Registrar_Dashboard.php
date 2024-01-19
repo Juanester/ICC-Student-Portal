@@ -13,5 +13,22 @@ class M_Registrar_Dashboard extends CI_Model{
         $this->db->where('employee_id', $employee_id);
         return $this->db->get()->result_array()[0];
     }
+
+    public function saveUploadedExcel($insert_array){
+        
+        $this->db->select('student_number');
+        $this->db->from('students');
+        $this->db->where('student_number', $insert_array['student_number']);
+
+        $result = $this->db->get()->result_array();
+
+        if($result){ 
+            $this->db->where('student_number',$insert_array['student_number']);
+            $this->db->update('students',$insert_array);
+        }else{
+            $this->db->insert('students',$insert_array);
+        }
+        
+    }
     
 }

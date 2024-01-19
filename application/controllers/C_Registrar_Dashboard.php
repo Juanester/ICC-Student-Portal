@@ -43,10 +43,23 @@ class C_Registrar_Dashboard extends CI_Controller {
                 $arr_data[$row][$column] = $data_value;
             }
         }
-        
 
-        var_dump($header);
-        var_dump($arr_data);
+        foreach ($arr_data as $row){
+            $insert_array = array(
+                'student_number' => $row['A'],
+                'first_name' => $row['B'],
+                'middle_name' => $row['C'],
+                'last_name' => $row['D'],
+                'contact_number' => $row['E'],
+                'email_address' => $row['F'],
+                'year_level' => $row['G']
+            );
+
+            $this->M_Registrar_Dashboard->saveUploadedExcel($insert_array);
+        }
+
+        $this->session->set_flashdata('message','Save Successful!');
+        redirect('C_Registrar_Dashboard/index');
     
     }
 

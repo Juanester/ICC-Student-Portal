@@ -9,10 +9,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <span>Welcome, <?= $registrar_info['last_name'] . ', ' . $registrar_info['first_name'] ?></span><br><br>
 
+    <span><?= !empty($message) ? $message : '' ?></span>
     <form action="/C_Registrar_Dashboard/studentUpload" method="post" enctype="multipart/form-data">
-        Select image to upload:
+        Select Excel to upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
+        <input type="submit" value="Upload Excel" name="submit">
     </form>
 
     <br><br>
