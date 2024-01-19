@@ -26,6 +26,7 @@ header{
     background-image: linear-gradient(to right, #0549af, #0057b6, #0064bb, #0071bf, #117dc2);
     box-shadow: 10px 7px 15px black;
     margin-bottom: 10px;
+    
 }
 header h1{
     font-size: 30px;
@@ -39,7 +40,7 @@ header h1{
     margin: auto;
     margin-top: 15%;
     position: absolute; 
-    /* background-color: rgba(0,0,0, 0.4);
+    /* background-color: rgba(0,0,0, 0.4); 
     box-shadow: 10px 7px 15px black; */
     border-radius: 10px;
 }
@@ -96,8 +97,8 @@ input.create{
     padding: 2px 4px;
 }
 .redirect {
-    margin-bottom: 15px;
-    width: 130px;
+    margin-bottom: 10px;
+    width: 150px;
     height: 30px;
     position: absolute;
     top: 0px;
@@ -116,6 +117,29 @@ input.create{
     color: yellow;
 }
 .redirect:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+.back{
+    margin-bottom: 10px;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 180px;
+    margin-top: 15px;
+    background-color: rgba(0,0,0, 0.4);
+    /* box-shadow: 10px 7px 15px black; */
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 0px;
+}
+.back a{
+    text-decoration: none;
+}
+.back a:hover{
+    color: yellow;
+}
+.back:hover{
     background-color: rgba(0,0,0, 0.1);
 }
 @media screen and (min-width: 600px) {

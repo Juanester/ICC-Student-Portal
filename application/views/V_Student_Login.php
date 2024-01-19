@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="logo">
             <img src="images\icc logo.webp" alt="logo">
             </div>
-            <div class="login">
+            <div class="login"> 
                 <h2>Student Portal Account</h2>
                 <span><?= !empty($message) ? $message : '' ?></span>
                 <form action="/C_Student_Login/studentLogin" method="post">

@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
+    <link rel="stylesheet" href="css\V_MIS_Dashboard.css?<?= filemtime('css\V_MIS_Dashboard.css'); ?>">
 </head>
 <body>
 
@@ -71,17 +71,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between text-gray-300">
+<!-- <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between text-gray-300"> -->
+<div class="con">
 <form action="/C_Student_Management/" method="post">
     <input class="hover:font-bold hover:text-gray-200" type="submit" value="Create Student">
 </form>
-
 <form action="/C_Employee_Management/" method="post">
     <input class="hover:font-bold hover:text-gray-200 " type="submit" value="Create Employee">
 </form>
-    </div>
 </div>
+    <!-- </div>
+</div> -->
  
 
 
