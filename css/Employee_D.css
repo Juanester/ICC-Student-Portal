@@ -97,6 +97,12 @@ input.create:active{
     color: #000000;
     padding: 2px 4px;
 }
+table{
+    visibility: visible;
+    position: absolute;
+    top: 11vh;
+    left: 21vw;
+}
 
 tr:first-child th:first-child { border-top-left-radius: 10px; }
 tr:first-child th:last-child { border-top-right-radius: 10px; }

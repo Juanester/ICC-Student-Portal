@@ -89,12 +89,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </thead>
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
             <tbody class="divide-y divide-gray-100">
-            <?php foreach ($employee_id as $row): ?>
+            <?php foreach ($teacher_schedule_infos as $row): ?>
             <tr class="bg-gray-300">
             
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_number'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['first_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['last_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
+ 
             </tr>
             <?php endforeach; ?>
         </tbody>
