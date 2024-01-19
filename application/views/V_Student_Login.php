@@ -25,11 +25,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <header>
         <h1>Immaculada Concepcion College</h1>
         <div class="redirect">
-            <a href="http://localhost/C_Employee_Login">Teacher Login ></a>
+            <a href="http://localhost/C_Employee_Login">Employee Login ></a>
         </div>
     </header>
 
-        <main> 
+        <main>  
             <div class="logo">
             <img src="images\icc logo.webp" alt="logo">
             </div>

@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/fontawesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4-navbar/4.3.1/css/bootstrap-4-navbar.min.css">
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
-    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
+    <link rel="stylesheet" href="css\V_Student_Create.css?<?= filemtime('css\V_Student_Create.css'); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
 </script>
 </head>
@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <main>
                 <div class="logo">
-                <img src="images\icc logo.webp" alt="logo">
+                <img src="images\icc logo.webp" alt="logo"> 
             </div>
 
 

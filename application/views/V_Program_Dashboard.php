@@ -70,40 +70,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
                       
-
-
-
-
-
-
-
-
-<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-        <div class="overflow-auto rounded-lg shadow mt-40">
-        <table class="w-full">
-            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+<div class="overflow-auto rounded-lg shadow mt-20">
+    <table>
+        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre> Teacher ID</pre></th>
                 <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Teacher Name</pre></th>
                 </tr>
             </thead>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-            <tbody class="divide-y divide-gray-100">
+
+         <tbody class="divide-y divide-gray-100">
             <?php foreach ($teacher_schedule_infos as $row): ?>
             <tr class="bg-gray-300">
             
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_number'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
+                
  
             </tr>
             <?php endforeach; ?>
         </tbody>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-            
-        </table>
-        </div>
+    </table>
     </div>
 
 
