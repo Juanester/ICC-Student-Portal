@@ -73,10 +73,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <label for="year_level">Select Year Level: </label>
         <select id="year_level" require>
           <option value="" selected disabled hidden>Please select</option>
-          <option value="1">1st Year</option>
-          <option value="2">2st Year</option>
-          <option value="3">3rd Year</option>
-          <option value="4">4th Year</option>
+          <option value="1">First Year</option>
+          <option value="2">Second Year</option>
+          <option value="3">Third Year</option>
+          <option value="4">Fourth Year</option>
         </select>
     </div>
 
