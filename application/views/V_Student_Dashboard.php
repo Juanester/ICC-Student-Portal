@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css\V_Student_Dashboard.css?<?= filemtime('css/Employee_D.css'); ?>">
+    <link rel="stylesheet" href="css\V_Student_Dashboard.css?<?= filemtime('css\V_Student_Dashboard.css'); ?>">
     </head>
 
 <body>
@@ -73,10 +73,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <label for="year_level">Select Year Level: </label>
         <select id="year_level" require>
           <option value="" selected disabled hidden>Please select</option>
-          <option value="volvo">1st Year</option>
-          <option value="saab">2st Year</option>
-          <option value="opel">3st Year</option>
-          <option value="audi">4st Year</option>
+          <option value="1">1st Year</option>
+          <option value="2">2st Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
         </select>
     </div>
 

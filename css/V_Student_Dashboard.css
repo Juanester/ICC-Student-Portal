@@ -115,6 +115,7 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
 }
 .seperator select{
     color: black;
+    text-align: center;
 }
 @media screen and (min-width: 600px) {
     .logo img{
