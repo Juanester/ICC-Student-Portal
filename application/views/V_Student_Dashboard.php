@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
+    <link rel="stylesheet" href="css\V_Student_Dashboard.css?<?= filemtime('css\V_Student_Dashboard.css'); ?>">
     </head>
 
 <body>
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             
     
-            <!-- Profile dropdown -->
+            <!-- Profile dropdown --> 
             
             <div class="relative ml-3">
               <div>
@@ -47,15 +47,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                      <span> <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?></span>
-                    <form action="/C_student_Dashboard/logout" method="post">
-                      <br>
-                      <div class="hover:text-blue-500 ">
-                    <input class="hover:font-bold" type="submit" value="         Logout">
-    </form>
-    </div>
+               <span> <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?></span>
+               <br>
+                          <form action="/C_student_Dashboard/logout" method="post">
+                          <div class="hover:text-blue-500 ">
+                          <input class="hover:font-bold block pr-12 text-sm text-gray-700 hover:text-blue-800" type="submit" value="Logout">
+                          </div>
+                          </form>
+              </div>
 
               
               </div>
@@ -68,10 +69,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-    
+    <div class="seperator">
+      <label for="year_level">Select Year Level: </label>
+        <select id="year_level" require>
+          <option value="" selected disabled hidden>Please select</option>
+          <option value="1">1st Year</option>
+          <option value="2">2st Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+    </div>
+
+
+
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
         <div class="overflow-auto rounded-lg shadow mt-40">
+
         <table class="w-full">
             <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
@@ -113,6 +127,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         </div>
         </div>
         </div>

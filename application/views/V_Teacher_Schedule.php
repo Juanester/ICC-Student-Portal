@@ -53,19 +53,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
                 </button>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-blue-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                      <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
-                    <form action="/C_Teacher_Dashboard/logout" method="post">
-                    <br>
-                    <div class="hover:text-blue-500 ">
-                    <input class="hover:font-bold" type="submit" value="         Logout">
-                    </form>
-                    
-                  
-                    
-
-              
+               <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
+               <br>
+                          <form action="/C_MIS_Dashboard/logout" method="post">
+                          <div class="hover:text-blue-500 ">
+                          <input class="hover:font-bold block pr-12 text-sm text-gray-700 hover:text-blue-800" type="submit" value="Logout">
+                          </div>
+                          </form>
               </div>
             </div>
           
@@ -78,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
   
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-9xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           
             <div class=" mt-40">
@@ -98,10 +94,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
             </tr>
         </thead>
+        <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
+              <input class="hover:font-bold text-gray-200" type="submit" value="save">
 
         <tbody class="divide-y divide-gray-100">
-          <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
-              <input class="hover:font-bold" type="submit" value="save">
               <input type="hidden" name="schedule_id" value="<?=$schedule_id?>">
             <?php foreach ($teacher_student_schedule_list as $row): ?>
               
@@ -124,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
                         <option value="<?= $option['grade_remarks_id'] ?>"
-                            <?= $row['grade_remarks_id'] == $option['grade_remarks_id'] ? 'selected' : ''?>>
+                            <?= $row['grade_remarks_id'] == $option['grade_remarks_id'] ? 'selected' : ''?>
                             <?= $option['grade_remarks_id'] . ' - ' . $option['grade_remarks_name'] ?>
                         </option>
                         <?php endforeach; ?>
@@ -134,9 +130,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </tr>
             
             <?php endforeach; ?>
-            </form>
+            
         </tbody>
-        
+        </form>
     </table>
             </div>
         </div>
@@ -149,10 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           var dropdown = document.getElementById("myProfileDropdown");
           dropdown.classList.toggle("hidden");
       }
-      function toggleMenuDropdown() {
-          var dropdown = document.getElementById("mobile-menu");
-          dropdown.classList.toggle("hidden");
-      }
+      
   </script>
 </body>
 
