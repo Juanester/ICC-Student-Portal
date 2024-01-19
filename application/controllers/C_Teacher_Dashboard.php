@@ -21,9 +21,9 @@ class C_Teacher_Dashboard extends CI_Controller {
 
         $data = array( 
             'teacher_info' => $teacher_info,
-            'schedule_list' => $schedule_list
+            'schedule_list' => $schedule_list 
         );
-		$this->load->view('V_Teacher_Dashboard', $data);
+		$this->load->view('V_Teacher_Dashboard', $data); 
     }
 
     public function schedule(){

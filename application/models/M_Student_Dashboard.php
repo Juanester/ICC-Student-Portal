@@ -29,12 +29,12 @@ class M_Student_Dashboard extends CI_Model{
         return $this->db->get()->result_array();
     }
     
-    public function fetchStudentInfo($student_id){
+    public function fetchStudentInfo($student_id){  
         $this->db->select('first_name');
         $this->db->select('last_name');
         $this->db->from('students');
         $this->db->where('student_id', $student_id);
-        return $this->db->get()->result_array()[0];
+        return $this->db->get()->result_array()[0]; 
     }
     public function studentLoginCreate($student_id, $password)
     {
