@@ -25,7 +25,7 @@ class M_Program_Dashboard extends CI_Model{
     }
 
     public function fetchTeacher($employee_id){
-        $this->db->select('course.course_name');
+        $this->db->select('course_name');
         $this->db->select('first_name');
         $this->db->select('last_name');
         $this->db->from('employee');
