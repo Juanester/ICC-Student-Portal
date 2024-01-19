@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1 class="text-gray-100 mt-5">     IMMACULADA CONCEPCION COLLEGE</h1>  
+                <h1 class="text-gray-100 mt-5">     <span> <?= $teacher_schedule['course_name'] ?></span></h1>  
               
             </div>
           </div>
@@ -51,7 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-               <span> <?= $MIS_info['first_name'] . ' ' . $MIS_info['last_name'] ?></span>
+               <span> <?= $teacher_schedule['first_name'] . ' ' . $teacher_schedule['last_name'] ?></span>
+               
                <br>
                           <form action="/C_MIS_Dashboard/logout" method="post">
                           <div>
@@ -69,39 +70,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
                       
-
-
-
-
-
-
-
-
-<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-        <div class="overflow-auto rounded-lg shadow mt-40">
-        <table class="w-full">
-            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+<div class="overflow-auto rounded-lg shadow mt-20">
+    <table>
+        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre> Teacher ID</pre></th>
                 <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre> Teacher Name</pre></th>
                 </tr>
             </thead>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-            <tbody class="divide-y divide-gray-100">
-            <?php foreach ($employee_id as $row): ?>
+
+         <tbody class="divide-y divide-gray-100">
+            <?php foreach ($teacher_schedule_infos as $row): ?>
             <tr class="bg-gray-300">
             
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_number'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['first_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['last_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
+                
+ 
             </tr>
             <?php endforeach; ?>
         </tbody>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-            
-        </table>
-        </div>
+    </table>
     </div>
 
 
