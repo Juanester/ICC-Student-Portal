@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1 class="text-gray-100 mt-5">     IMMACULADA CONCEPCION COLLEGE</h1>  
+                <h1 class="text-gray-100 mt-5">     <span> <?= $teacher_schedule['course_name'] ?></span></h1>  
               
             </div>
           </div>
