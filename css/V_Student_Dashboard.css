@@ -9,39 +9,31 @@ html{
     height: 100%;
 }
 body{
-    /* background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
-    #140551, #110448, #0f013f); */
-    background-image: radial-gradient(circle, #005ce7, #0071f1, #0084f8, 
-    #0096fc, #1fa8ff);
+    background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
+    #140551, #110448, #0f013f);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }
 header{
     color: whitesmoke;
-    /* background-image: linear-gradient(to right top, #1e0074, #180267,
-    #13035a, #10034d, #0e0041); */
-    background-image: linear-gradient(to right, #0549af, #0057b6, #0064bb, #0071bf, #117dc2);
-    box-shadow: 10px 7px 15px black;
+    background-image: linear-gradient(to right top, #1e0074, #180267,
+    #13035a, #10034d, #0e0041);
     margin-bottom: 10px;
 }
 header h1{
     font-size: 30px;
     padding: 10px 15px 10px 50px;
-    width: 550px;
 }
 .login{
-    width: 25%;
+    width: 50%;
     color: whitesmoke;
     justify-content: center;
     margin: auto;
     margin-top: 15%;
-    position: absolute; 
-    background-color: rgba(0,0,0, 0.4);
-    box-shadow: 10px 7px 15px black;
-    border-radius: 10px;
+    position: absolute;
 }
 .logo img{
     position: absolute;
@@ -65,14 +57,11 @@ header h1{
     padding: 5px;
 }
 .login .login_button{
+    border-radius: 5px;
     background: none;
-    color: yellow;
+    color: whitesmoke;
     padding: 5px 10px;
     margin-bottom: 10px;
-    border: none;
-}
-.login .login_button:active{
-    color: whitesmoke;
 }
 .login span{
     display: flex;
@@ -80,6 +69,8 @@ header h1{
     color: yellow;
 }
 select, input, textarea, option{
+    width: 185px;
+    height: 28px;
     border-radius: 5px;
     color: #000000;
 }
@@ -92,31 +83,38 @@ textarea:focus, input:focus {
 input.create{
     font-size: 15px;
     color: yellow;
+    cursor: pointer;
+}
+input.create:active{
+    color: whitesmoke;
 }
 #student_id, #password{
     color: #000000;
     padding: 2px 4px;
 }
-.redirect {
-    margin-bottom: 15px;
-    width: 130px;
+table{
+    visibility: visible;
+    position: absolute;
+    top: 20px;
+    left: 25svw;
+}
+tr:first-child th:first-child { border-top-left-radius: 10px; }
+tr:first-child th:last-child { border-top-right-radius: 10px; }
+
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+.seperator{
+    width: 50%;
+    color: whitesmoke;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15%;
     position: absolute;
     top: 0px;
-    right: 10px;
-    margin-top: 15px;
-    background-color: rgba(0,0,0, 0.4);
-    /* box-shadow: 10px 7px 15px black; */
-    border-radius: 10px;
-    text-align: center;
+    left: 40vw;
 }
-.redirect a{
-    text-decoration: none;
-}
-.redirect a:hover {
-    color: yellow;
-}
-.redirect:hover{
-    background-color: rgba(0,0,0, 0.1);
+.seperator select{
+    color: black;
 }
 @media screen and (min-width: 600px) {
     .logo img{
@@ -126,14 +124,8 @@ input.create{
     }
     .login{
         top: 10vh;
-        left: 20vw;
-        width: 25%;
-    }
-    select, input, textarea, option{
-        width: 185px;
-        height: 28px;
-        border-radius: 5px;
-        color: #000000;
+        left: 10vw;
+        width: 50%;
     }
   }
   
@@ -144,15 +136,8 @@ input.create{
         width: 30%;
     }
     .login{
-        top: 33%;
-        left: 26%;
+        top: 30%;
+        left: 25%;
         width: 50%;
-        height: 40%;
-    }
-    select, input, textarea, option{
-        width: 70%;
-        height: 10%;
-        border-radius: 5px;
-        color: #000000;
     }
 }

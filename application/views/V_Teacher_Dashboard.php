@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-
+ 
     <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
 <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -84,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Room</pre></th>
 
-            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Schedule</pre></th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Schedule</pre></th>
 
             <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left"><pre>Year Level</pre></th>
 
