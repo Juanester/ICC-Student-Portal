@@ -19,19 +19,10 @@ class M_Program_Dashboard extends CI_Model{
         $this->db->from('schedule');
         $this->db->join('employee','schedule.employee_id = employee.employee_id','left');
         $this->db->join('section','schedule.section_id = section.section_id','left');
-
-
-        
+     
         return $this->db->get()->result_array();
     }
-    public function fetchTeacherName($employee_id){
-        $this->db->select(' first_name');
-        $this->db->select('last_name');
-        $this->db->from('employee');
-        $this->db->where('employee_id', $employee_id);
-        
-        return $this->db->get()->result_array();
-    }
+
     public function fetchTeacher($employee_id){
         $this->db->select('first_name');
         $this->db->select('last_name');
