@@ -74,11 +74,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between text-gray-300">
 <form action="/C_Student_Management/" method="post">
-                    <input class="hover:font-bold hover:text-gray-200" type="submit" value="Create Student">
+    <input class="hover:font-bold hover:text-gray-200" type="submit" value="Create Student">
 </form>
 
 <form action="/C_Employee_Management/" method="post">
-                    <input class="hover:font-bold hover:text-gray-200 " type="submit" value="Create Employee">
+    <input class="hover:font-bold hover:text-gray-200 " type="submit" value="Create Employee">
 </form>
     </div>
 </div>

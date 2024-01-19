@@ -36,7 +36,7 @@ class M_Teacher_Dashboard extends CI_Model{
         return $this->db->get()->result_array()[0];
     }
     
-    public function fetchTeacherStudentScheduleList($schedule_id){
+    public function fetchTeacherStudentScheduleList($schedule_id){ 
 
         $section_id = $this->fetchScheduleSection($schedule_id);
         $this->db->select('students_schedule.student_schedule_id');
