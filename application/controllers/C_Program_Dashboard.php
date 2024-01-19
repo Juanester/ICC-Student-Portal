@@ -17,10 +17,10 @@ class C_Program_Dashboard extends CI_Controller {
     public function index(){
         
         $employee_id = $this->session->userdata('employee_id');
-        $MIS_info = $this->M_Program_Dashboard->fetchRegistrarInfo($employee_id);
+        $teacher_schedule_info = $this->M_Program_Dashboard->fetchTeacherInfo($employee_id);
         
         $data = array( 
-            'MIS_info' => $MIS_info
+            'teacher_schedule_infos' => $teacher_schedule_info
         );
 		$this->load->view('V_Program_Dashboard', $data);
     }
