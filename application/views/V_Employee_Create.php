@@ -9,7 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <base href="<?= base_url(); ?>">
-<link rel="stylesheet" href="css\V_Employee_Create.css">
+<!-- <link rel="stylesheet" href="css\V_Employee_Create.css">    -->
+<link rel="stylesheet" href="css\V_Employee_Create.css?<?= filemtime('css\V_Employee_Create.css'); ?>">
 <script src="https://cdn.tailwindcss.com"></script> 
 </head>
 <body>
@@ -19,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </header>
     
     <div class="logo">
-        <img src="images\icc logo.webp" alt="logo">
+        <img src="images\icc logo.webp" alt="logo"> 
     </div>
 
     <div class="login">

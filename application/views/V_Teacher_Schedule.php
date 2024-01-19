@@ -121,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="final_grade[]" value="<?= $row['final_grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="grade[]" value="<?= $row['grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200">
-                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>">
+                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>"> 
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
                         <option value="<?= $option['grade_remarks_id'] ?>"

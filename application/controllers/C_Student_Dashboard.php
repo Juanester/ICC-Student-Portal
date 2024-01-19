@@ -10,7 +10,7 @@ class C_Student_Dashboard extends CI_Controller {
             redirect('C_Student_Login');
         }
 
-        $this->load->model('M_Student_Dashboard');
+        $this->load->model('M_Student_Dashboard'); 
     }
 
     public function index(){
