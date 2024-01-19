@@ -9,8 +9,10 @@ html{
     height: 100%;
 }
 body{
-    background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
-    #140551, #110448, #0f013f);
+    /* background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
+    #140551, #110448, #0f013f); */
+    background-image: radial-gradient(circle, #005ce7, #0071f1, #0084f8, 
+    #0096fc, #1fa8ff);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%; 
@@ -19,13 +21,16 @@ body{
 }
 header{
     color: whitesmoke;
-    background-image: linear-gradient(to right top, #1e0074, #180267,
-    #13035a, #10034d, #0e0041);
+    /* background-image: linear-gradient(to right top, #1e0074, #180267,
+    #13035a, #10034d, #0e0041); */
+    background-image: linear-gradient(to right, #0549af, #0057b6, #0064bb, #0071bf, #117dc2);
+    box-shadow: 10px 7px 15px black;
     margin-bottom: 10px;
 }
 header h1{
     font-size: 30px;
     padding: 10px 15px 10px 50px;
+    width: 550px;
 }
 .login{
     width: 25%;
@@ -35,12 +40,11 @@ header h1{
     margin-top: 15%;
     position: absolute; 
     background-color: rgba(0,0,0, 0.4);
-    border-radius: 5px;
+    box-shadow: 10px 7px 15px black;
+    border-radius: 10px;
 }
 .logo img{
     position: absolute;
-    top: 20vh;
-    left: 50vw;
     width: 30%;
     margin: auto;
     pointer-events: none;
@@ -74,8 +78,6 @@ header h1{
     color: yellow;
 }
 select, input, textarea, option{
-    /* width: 185px;
-    height: 28px; */
     border-radius: 5px;
     color: #000000;
 }
@@ -93,9 +95,32 @@ input.create{
     color: #000000;
     padding: 2px 4px;
 }
+.redirect {
+    margin-bottom: 15px;
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    margin-top: 15px;
+    background-color: rgba(0,0,0, 0.4);
+    /* box-shadow: 10px 7px 15px black; */
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 0px;
+}
+.redirect a{
+    text-decoration: none;
+}
+.redirect a:hover {
+    color: yellow;
+}
+.redirect:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
 @media screen and (min-width: 600px) {
     .logo img{
-        top: 20vh;
+        top: 25vh;
         left: 50vw;
         width: 30%;
     }

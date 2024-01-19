@@ -99,24 +99,15 @@ input.create:active{
 }
 table{
     visibility: visible;
-    position:relative;
-    top: 11vh;
-    left: 5%;
-    width: 90%;
-    overflow: scroll;
+    position: absolute;
+    top: 30px;
+    left: 25vw;
 }
-
 tr:first-child th:first-child { border-top-left-radius: 10px; }
 tr:first-child th:last-child { border-top-right-radius: 10px; }
 
 tr:last-child td:first-child { border-bottom-left-radius: 10px; }
 tr:last-child td:last-child { border-bottom-right-radius: 10px; }
-.save{
-    position: absolute;
-    color: whitesmoke;
-    bottom: 3%;
-    right: 10%;
-}
 .seperator{
     width: 50%;
     color: whitesmoke;

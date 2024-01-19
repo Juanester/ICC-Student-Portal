@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="<?= base_url(); ?>">
+    <base href="<?= base_url(); ?>"> 
 
     <link rel="stylesheet" href="lib/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css" />
@@ -24,6 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <header>
         <h1>Immaculada Concepcion College</h1>
+        <div class="redirect">
+            <a href="http://localhost/">Student Login ></a>
+        </div>
     </header>
 
         <main>
@@ -42,8 +45,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <label for="password">Password</label><br>
                         <input type="password" id="password" name="password" value="" maxlength="12" require><br><br>
                     </div>
+                    
                     <div class="login_button_container">
-                        <!-- Center the login button -->
                         <input class="login_button hover:bg-blue-200 hover:text-gray-900" type="submit" value="Login">
                     </div>
                 </form>
