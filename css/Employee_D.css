@@ -123,6 +123,26 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
     padding-left: 35px; 
     text-align: left;
 }
+.redirect{
+    color: whitesmoke;
+    background-color: rgba(119, 114, 114, 0.2);
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;   
+    padding: 3px;
+    border-radius: 10px;
+}
+.redirect a{
+    text-decoration: none;
+}
+.redirect a:hover {
+    color: yellow;
+}
+.redirect:hover{
+    background-color: rgba(0,0,0, 0.4);
+    box-shadow: 10px 7px 15px black;
+}
 @media screen and (min-width: 600px) {
     .logo img{
         top: 20vh;

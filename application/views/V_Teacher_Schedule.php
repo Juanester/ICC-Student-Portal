@@ -82,16 +82,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>    Student Number</pre></th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Student Name</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Year Level</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Section Name</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Status</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Finals Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Grade</th>
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>    Student Number</pre></th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Student Name</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Year Level</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Section Name</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Status</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Preliminary Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Midterm Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Finals Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Grade</th>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center">Remarks</th>
             </tr>
         </thead>
 
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-        <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
+        <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post"> 
               <input class="save" type="submit" value="save">
 
         <tbody class="divide-y divide-gray-100">
@@ -107,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php foreach ($teacher_student_schedule_list as $row): ?>
               
               
-            <tr class="bg-gray-300">
+            <tr>
 
                 <input type="hidden" name=student_schedule_id[] value="<?= $row['student_schedule_id'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>      <?= $row['student_number'] ?></pre></td>
@@ -121,12 +121,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="final_grade[]" value="<?= $row['final_grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="grade[]" value="<?= $row['grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200">
-                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>"> 
+                    <select class="opt" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>"> 
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
-                        <option value="<?= $option['grade_remarks_id'] ?>"
-                            <?= $row['grade_remarks_id'] == $option['grade_remarks_id'] ? 'selected' : ''?>
-                            <?= $option['grade_remarks_id'] . ' - ' . $option['grade_remarks_name'] ?>
+                        <option value="<?= $option['grade_remarks_id'] ?>">
+                        <?= $row['grade_remarks_id'] == $option['grade_remarks_id'] ? '' : ''?>
+                        <?= $option['grade_remarks_id'] . ' - ' . $option['grade_remarks_name'] ?>
                         </option>
                         <?php endforeach; ?>
                     </select>

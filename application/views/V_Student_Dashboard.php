@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Semester</th>
 
-                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th>
+                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Preliminary Grade</th> 
 
                 <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Midterm Grade</th>
 
