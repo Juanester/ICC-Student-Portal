@@ -1,6 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="j_g8gh28uCQ0Rz1yhC9v" name="ERD">
+<<<<<<< HEAD
+        <mxGraphModel dx="1399" dy="1545" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+=======
         <mxGraphModel dx="1976" dy="1930" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+>>>>>>> aad5aaba88cefa7462d75efcfea04a25cca30d1f
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
