@@ -11,7 +11,7 @@ html{
 body{
     /* background-image: linear-gradient(to right bottom, #4b17da, #18055b, 
     #140551, #110448, #0f013f); */
-    background-image: radial-gradient(circle, #005ce7, #0071f1, #0084f8, 
+    background-image: radial-gradient(circle, #005ce7, #0071f1, #0084f8,  
     #0096fc, #1fa8ff);
     background-repeat: no-repeat;
     background-size: cover;

@@ -78,6 +78,7 @@ select, input, textarea, option{
     height: 28px;
     border-radius: 5px;
     color: #000000;
+    text-align: center;
 }
 textarea:focus, input:focus {
     color: #000000;
@@ -103,14 +104,15 @@ table{
     top: 11vh;
     left: 5%;
     width: 90%;
-    overflow: scroll;
+    overflow: scroll; 
 }
 
 tr:first-child th:first-child { border-top-left-radius: 10px; }
 tr:first-child th:last-child { border-top-right-radius: 10px; }
 
-tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+/* tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; } */
+
 .save{
     position: absolute;
     color: whitesmoke;
