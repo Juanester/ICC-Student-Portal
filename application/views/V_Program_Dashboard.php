@@ -25,20 +25,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             
+
+
             <div class="flex flex-shrink-0 items-center">
-              
             <img src="<?php echo base_url();?>images/iccl.webp" alt="" style="width: 50px;">
             </div>
+
             <div class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1 class="text-gray-100 mt-5">     <span> <?= $teacher_schedule['course_name'] ?></span></h1>  
-              
+                <h1 class="text-gray-100 mt-5">     <span> <?= $teacher_schedule['course_name'] ?></span></h1> 
             </div>
           </div>
+
+          <div class="redirect">
+            <a  href="http://localhost/C_Program_Dashboard/index">Student List ></a>
+          </div>
+
+
+
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          
-    
             <!-- Profile dropdown -->
             
             <div class="relative ml-3">
@@ -62,6 +68,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
           
+
+
+
           </div>
         </div>
       </div>
