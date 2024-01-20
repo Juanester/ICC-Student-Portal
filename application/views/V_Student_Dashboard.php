@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1 class="text-gray-100 mt-5">     IMMACULADA CONCEPCION COLLEGE</h1>  
+                <h1 class="text-gray-100 mt-5"><span> <?= $student_info['course_name'] ?></span></h1>  
               
             </div>
           </div>
@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                <span> <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?></span>
+               
                <br>
                           <form action="/C_student_Dashboard/logout" method="post">
                           <div class="hover:text-blue-500 ">
@@ -127,42 +128,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         </div>
         </div>
         </div>

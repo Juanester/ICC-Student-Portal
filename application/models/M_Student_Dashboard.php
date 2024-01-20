@@ -30,10 +30,12 @@ class M_Student_Dashboard extends CI_Model{
     }
     
     public function fetchStudentInfo($student_id){  
+        $this->db->select('course_name');
         $this->db->select('first_name');
         $this->db->select('last_name');
         $this->db->from('students');
         $this->db->where('student_id', $student_id);
+        $this->db->join('course','students.course_id = course.course_id','left');
         return $this->db->get()->result_array()[0]; 
     }
     public function studentLoginCreate($student_id, $password)
