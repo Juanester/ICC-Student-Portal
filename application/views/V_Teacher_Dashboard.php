@@ -73,11 +73,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
+<!-- <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"> -->
+    <!-- <div class="relative flex h-16 items-center justify-between"> -->
 
     <div class="overflow-auto rounded-lg shadow mt-20">
-    <table class="w-full">
+    <table>
         <thead class="bg-gray-200 border-b-2 ">
         <tr>
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left"><pre>Subject</pre></th>
@@ -102,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['room_remarks'] ?></td> 
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['schedule_remarks'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['schedule_remarks'] ?></td> 
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>    <?= $row['year_level'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['semester'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>  <?= $row['section_name'] ?></pre></td>
@@ -114,8 +114,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </tbody>
     </table>
     </div>
-    </div>    
-    </div>
+    <!-- </div>     -->
+    <!-- </div> -->
  
 
 

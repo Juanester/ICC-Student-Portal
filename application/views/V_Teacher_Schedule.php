@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<html>
+<html> 
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
+    <link rel="stylesheet" href="css\V_Teacher_Schedule.css?<?= filemtime('css\V_Teacher_Schedule.css'); ?>">
 </head>
 <body>
        <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
@@ -74,11 +74,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
   
-    <div class="mx-auto max-w-9xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
+    <!-- <div class="mx-auto max-w-9xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between"> -->
           
-            <div class=" mt-40">
-            <table class="w-full">
+            <div class="">
+            <table>
 
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
@@ -94,8 +94,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Remarks</th>
             </tr>
         </thead>
+
+
+
+
+
         <form action="/C_Teacher_Dashboard/saveStudentGrade" method="post">
-              <input class="hover:font-bold text-gray-200" type="submit" value="save">
+              <input class="save" type="submit" value="save">
 
         <tbody class="divide-y divide-gray-100">
               <input type="hidden" name="schedule_id" value="<?=$schedule_id?>">
@@ -116,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="final_grade[]" value="<?= $row['final_grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><input type="number"step=".01" name="grade[]" value="<?= $row['grade'] ?>">
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200">
-                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>">
+                    <select type="" name="grade_remarks_id[]" value="<?= $row['grade_remarks_id'] ?>"> 
                         <option value="" hidden>-</option>
                         <?php foreach ($grade_remarks_list as $option) : ?>
                         <option value="<?= $option['grade_remarks_id'] ?>"
@@ -126,7 +131,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php endforeach; ?>
                     </select>
                 </td>
-
             </tr>
             
             <?php endforeach; ?>
@@ -135,8 +139,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </form>
     </table>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 
     
 

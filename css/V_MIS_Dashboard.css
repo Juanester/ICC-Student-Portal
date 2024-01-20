@@ -123,6 +123,13 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
     padding-left: 35px; 
     text-align: left;
 }
+.con{
+    padding-top: 100px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    color: whitesmoke;
+}
 @media screen and (min-width: 600px) {
     .logo img{
         top: 20vh;

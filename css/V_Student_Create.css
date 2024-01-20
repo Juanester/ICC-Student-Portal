@@ -26,12 +26,13 @@ header{
     background-image: linear-gradient(to right, #0549af, #0057b6, #0064bb, #0071bf, #117dc2);
     box-shadow: 10px 7px 15px black;
     margin-bottom: 10px;
-    
+    height: 65px;
 }
 header h1{
     font-size: 30px;
     padding: 10px 15px 10px 50px;
     width: 550px;
+    height: 65px;
 }
 .login{
     width: 25%;
@@ -98,7 +99,7 @@ input.create{
 }
 .redirect {
     margin-bottom: 10px;
-    width: 150px;
+    width: 160px;
     height: 30px;
     position: absolute;
     top: 0px;

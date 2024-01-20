@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <option value="1">First Year</option>
           <option value="2">Second Year</option>
           <option value="3">Third Year</option>
-          <option value="4">Fourth Year</option>
+          <option value="4">Fourth Year</option> 
         </select>
     </div>
 
@@ -176,10 +176,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           var dropdown = document.getElementById("myProfileDropdown");
           dropdown.classList.toggle("hidden");
       }
-      function toggleMenuDropdown() {
-          var dropdown = document.getElementById("mobile-menu");
-          dropdown.classList.toggle("hidden");
-      }
+      
   </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 </body>
