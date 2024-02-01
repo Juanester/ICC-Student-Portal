@@ -7,7 +7,7 @@ class C_Employee_Management extends CI_Controller {
         parent::__construct();
         $this->load->model('M_Employee_Management');
     }
-
+//test
 	public function index()
 	{
         $employee_list = $this->M_Employee_Management->fetchEmployee();
